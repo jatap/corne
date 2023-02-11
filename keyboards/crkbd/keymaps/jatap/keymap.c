@@ -45,9 +45,9 @@ enum custom_keycodes {
 #define HOME_I LALT_T(KC_I)
 #define HOME_O RGUI_T(KC_O)
 
-#define LAYER_MEDIA LT(1, KC_ESC)
-#define LAYER_NAV LT(2, KC_SPC)
-#define LAYER_NUM LT(3, KC_TAB)
+#define LAYER_MEDIA LT(1, KC_TAB)
+#define LAYER_NAV LT(2, KC_ESC)
+#define LAYER_NUM LT(3, KC_SPC)
 #define LAYER_SYM LT(4, KC_BSPC)
 #define LAYER_VIM LT(5, KC_ENT)
 #define LAYER_APPS LT(6, KC_DEL)
@@ -258,8 +258,8 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        // case LAYER_NAV:
-        case LAYER_NUM:
+        case LAYER_NAV:
+        // case LAYER_NUM:
         case LAYER_SYM:
         case LAYER_VIM:
         case LAYER_APPS:
