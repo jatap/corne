@@ -46,8 +46,8 @@ enum custom_keycodes {
 #define HOME_O RGUI_T(KC_O)
 
 #define LAYER_MEDIA LT(1, KC_TAB)
-#define LAYER_NAV LT(2, KC_ESC)
-#define LAYER_NUM LT(3, KC_SPC)
+#define LAYER_NAV LT(2, KC_SPC)
+#define LAYER_NUM LT(3, KC_ESC)
 #define LAYER_SYM LT(4, KC_BSPC)
 #define LAYER_VIM LT(5, KC_ENT)
 #define LAYER_APPS LT(6, KC_DEL)
@@ -132,11 +132,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x5_3(
-         KC_Q,         KC_W,         KC_F,         KC_P,    KC_B,                              KC_J,         KC_L,         KC_U,   KC_Y, KC_QUOT,
-       HOME_A,       HOME_R,       HOME_S,       HOME_T,    KC_G,                              KC_M,       HOME_N,       HOME_E, HOME_I,  HOME_O,
-         // KC_A,         KC_X,         KC_C,         KC_D,    KC_V,                              KC_K,         KC_H,      KC_COMM, KC_DOT, KC_SLSH,
-         KC_Z,         KC_X,         KC_C,         KC_D,    KC_V,                              KC_K,         KC_H,      KC_COMM, KC_DOT, KC_SLSH,
-                                      LT(1,KC_TAB), LT(2,KC_ESC), LT(3,KC_SPC),       LT(4,KC_BSPC), LT(5,KC_ENT), LT(6,KC_DEL)
+         KC_Q,   KC_W,   KC_F,   KC_P, KC_B,                                       KC_J,       KC_L,    KC_U,   KC_Y, KC_QUOT,
+       HOME_A, HOME_R, HOME_S, HOME_T, KC_G,                                       KC_M,     HOME_N,  HOME_E, HOME_I,  HOME_O,
+         KC_Z,   KC_X,   KC_C,   KC_D, KC_V,                                       KC_K,       KC_H, KC_COMM, KC_DOT, KC_SLSH,
+                     LAYER_MEDIA, LAYER_NAV, LAYER_NUM,            LAYER_SYM, LAYER_VIM, LAYER_APPS
   ),
 
   [1] = LAYOUT_split_3x5_3(
@@ -259,8 +258,8 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        case LAYER_NAV:
-        // case LAYER_NUM:
+        // case LAYER_NAV:
+        case LAYER_NUM:
         case LAYER_SYM:
         case LAYER_VIM:
         case LAYER_APPS:
