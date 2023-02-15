@@ -178,35 +178,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX, LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), XXXXXXX,              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         KC_F3, HYPR(KC_C),        HYPR(KC_D),       HYPR(KC_F),  QMK_M0,              XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI,
       XXXXXXX,     KC_F12,        SGUI(KC_4),       HYPR(KC_N), XXXXXXX,              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                         MO(7), XXXXXXX, LCTL(KC_SPACE),     XXXXXXX, XXXXXXX, XXXXXXX
+                                         MO(1), XXXXXXX, LCTL(KC_SPACE),     XXXXXXX, XXXXXXX, XXXXXXX
   ),
-
-//   [7] = LAYOUT_split_3x5_3(
-//       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-//       KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                               XXXXXXX, KC_A, XXXXXXX, XXXXXXX, XXXXXXX,
-//       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-//                                  XXXXXXX, XXXXXXX,  XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX
-//   ),
 };
 
+#ifdef TAPPING_TERM_PER_KEY
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case HOME_A:
         case HOME_R:
         case HOME_S:
-        case HOME_T:
-        case HOME_N:
         case HOME_E:
         case HOME_I:
         case HOME_O:
-            return TAPPING_TERM + 50;
+            return TAPPING_TERM + 100;
+        case HOME_T:
+        case HOME_N:
+            return TAPPING_TERM + 75;
         case LAYER_NUM:
-            return TAPPING_TERM + 20;
+            return TAPPING_TERM + 50;
         default:
             return TAPPING_TERM;
     }
 }
+#endif
 
+#ifdef IGNORE_MOD_TAP_INTERRUPT_PER_KEY
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case HOME_A:
@@ -222,7 +219,9 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
 }
+#endif
 
+#ifdef TAPPING_FORCE_HOLD_PER_KEY
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case HOME_A:
@@ -238,7 +237,9 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
 }
+#endif
 
+#ifdef PERMISSIVE_HOLD_PER_KEY
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         // case HOME_T:
@@ -254,7 +255,9 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
 }
+#endif
 
+#ifdef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
@@ -268,3 +271,4 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
 }
+#endif

@@ -27,16 +27,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 200
 #define TAPPING_TERM_PER_KEY
 
-// #define IGNORE_MOD_TAP_INTERRUPT
 #define IGNORE_MOD_TAP_INTERRUPT_PER_KEY
-
-// #define TAPPING_FORCE_HOLD
 #define TAPPING_FORCE_HOLD_PER_KEY
-
-// #define PERMISSIVE_HOLD
 #define PERMISSIVE_HOLD_PER_KEY
-
-// #define HOLD_ON_OTHER_KEY_PRESS
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 
 // #define RETRO_TAPPING
@@ -46,6 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define AUTO_SHIFT_TIMEOUT 175
 #define NO_AUTO_SHIFT_ALPHA
+#define AUTO_SHIFT_NO_SETUP
 // #define AUTO_SHIFT_REPEAT
 
 // #define COMBO_TERM 25
