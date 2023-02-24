@@ -10,11 +10,9 @@ AUDIO_ENABLE        = no
 VIAL_INSECURE       = no
 KEY_OVERRIDE_ENABLE = no
 LEADER_ENABLE       = no
-
 QMK_SETTINGS        = no
 VIA_ENABLE          = no
 VIAL_ENABLE         = no
-
 COMBO_ENABLE        = yes
 MOUSEKEY_ENABLE     = yes
 NKRO_ENABLE         = yes

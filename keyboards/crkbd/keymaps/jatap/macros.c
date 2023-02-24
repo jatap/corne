@@ -1,0 +1,83 @@
+#include QMK_KEYBOARD_H
+
+#include "keycodes.h"
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    case QMK_M0:
+        if (record->event.pressed) {
+            SEND_STRING("cls\n");
+        }
+        break;
+
+    case QMK_M1:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_LSFT(SS_TAP(X_9)));
+        }
+        break;
+
+    case QMK_M2:
+        if (record->event.pressed) {
+            SEND_STRING("]d");
+        }
+        break;
+
+    case QMK_M3:
+        if (record->event.pressed) {
+            SEND_STRING("]b");
+        }
+        break;
+
+    case QMK_M4:
+        if (record->event.pressed) {
+            SEND_STRING("[d");
+        }
+        break;
+
+    case QMK_M5:
+        if (record->event.pressed) {
+            SEND_STRING("[b");
+        }
+        break;
+
+    case QMK_M6:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_Q) SS_TAP(X_S));
+        }
+        break;
+
+    case QMK_M7:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_B) SS_TAP(X_C));
+        }
+        break;
+
+    case QMK_M8:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_Q) SS_TAP(X_N));
+        }
+        break;
+
+    case QMK_M9:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_S) SS_TAP(X_T));
+        }
+        break;
+
+    case QMK_M10:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_D) SS_TAP(X_O));
+        }
+        break;
+
+    case QMK_M11:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_D) SS_TAP(X_C));
+        }
+        break;
+
+    }
+    return true;
+};
+
+

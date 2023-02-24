@@ -18,42 +18,48 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-// Combos
-#define COMBO_TERM 25
-#define COMBO_MOD_TERM 175
-#define COMBO_MUST_HOLD_MODS
-#define EXTRA_SHORT_COMBOS
-#define COMBO_STRICT_TIMER
+// #define VIAL_KEYBOARD_UID {0xE1, 0x6F, 0x65, 0xC5, 0xFE, 0xF8, 0xD6, 0x58}
+// #define VIAL_UNLOCK_COMBO_ROWS {1, 1}
+// #define VIAL_UNLOCK_COMBO_COLS {1, 2}
 
-// Layers
+#define COMBO_COUNT 10
+#define COMBO_TERM 25
+#define COMBO_MUST_HOLD_MODS
+#define COMBO_MOD_TERM 175
+
 #define DYNAMIC_KEYMAP_LAYER_COUNT 7
 
-// Tap hold
 #define TAPPING_TERM 200
 #define TAPPING_TERM_PER_KEY
-#define IGNORE_MOD_TAP_INTERRUPT_PER_KEY
-#define TAPPING_FORCE_HOLD_PER_KEY
-#define PERMISSIVE_HOLD_PER_KEY
-#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
-#define TAPPING_TOGGLE 1
-#define ONESHOT_TAP_TOGGLE 2
 
-// Autoshift
+#define IGNORE_MOD_TAP_INTERRUPT
+#define IGNORE_MOD_TAP_INTERRUPT_PER_KEY
+#define TAPPING_FORCE_HOLD
+#define TAPPING_FORCE_HOLD_PER_KEY
+#define PERMISSIVE_HOLD
+#define PERMISSIVE_HOLD_PER_KEY
+#define HOLD_ON_OTHER_KEY_PRESS
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+
+#define TAPPING_TOGGLE 2
+
 #define AUTO_SHIFT_TIMEOUT 175
 #define NO_AUTO_SHIFT_ALPHA
 #define AUTO_SHIFT_NO_SETUP
 
-// Caps word
 #define CAPS_WORD_IDLE_TIMEOUT 3000
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-// Corne specifics
+//#define USE_MATRIX_I2C
 #ifdef KEYBOARD_crkbd_rev1_legacy
 #    undef USE_I2C
 #    define USE_SERIAL
 #endif
 
-// Select hand configuration
+/* Select hand configuration */
+
 #define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
 
 #define USE_SERIAL_PD2
