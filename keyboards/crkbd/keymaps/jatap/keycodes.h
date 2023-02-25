@@ -1,16 +1,5 @@
 #pragma once
 
-// Layers
-typedef enum {
-    _BASE,
-    _MEDIA,
-    _NAV,
-    _NUM,
-    _SYM,
-    _VIM,
-    _APPS,
-} layers_t;
-
 // Left-hand home row mods
 #define HOME_A LGUI_T(KC_A)
 #define HOME_R LALT_T(KC_R)
