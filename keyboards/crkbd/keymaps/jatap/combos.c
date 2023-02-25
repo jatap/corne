@@ -1,11 +1,4 @@
-#include QMK_KEYBOARD_H
-
-// Combos
-enum combo_events {
-    TMUX,
-    CLEAR_SCREEN,
-    COMBO_LENGTH
-};
+#include "combos.h"
 
 // Remove the COMBO_COUNT define and use this instead!
 uint16_t COMBO_LEN = COMBO_LENGTH; 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include QMK_KEYBOARD_H
+
 // Left-hand home row mods
 #define HOME_A LGUI_T(KC_A)
 #define HOME_R LALT_T(KC_R)

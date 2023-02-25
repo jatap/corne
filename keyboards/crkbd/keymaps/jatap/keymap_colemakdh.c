@@ -1,8 +1,7 @@
-#include QMK_KEYBOARD_H
-
 #include "keycodes.h"
 #include "tap_dance.c"
 #include "macros.c"
+#include "combos.c"
 
 #define _____________________BASE_L1______________________ KC_Q,   KC_W,   KC_F,   KC_P,   KC_B
 #define _____________________BASE_L2______________________ HOME_A, HOME_R, HOME_S, HOME_T, KC_G
