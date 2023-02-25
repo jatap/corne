@@ -8,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_Q,   KC_W,   KC_F,   KC_P, KC_B,                                       KC_J,       KC_L,    KC_U,   KC_Y, KC_QUOT,
        HOME_A, HOME_R, HOME_S, HOME_T, KC_G,                                       KC_M,     HOME_N,  HOME_E, HOME_I,  HOME_O,
          KC_Z,   KC_X,   KC_C,   KC_D, KC_V,                                       KC_K,       KC_H, TD(TD_COMMA_SEMICOLON), KC_DOT, KC_SLSH,
-                     LAYER_MEDIA, LAYER_NAV, KC_SPC,               LAYER_SYM, LAYER_VIM, LAYER_APPS
+                          KC_TAB, LAYER_NAV, KC_SPC,               LAYER_SYM, LAYER_VIM, KC_DEL
   ),
 
   [1] = LAYOUT_split_3x5_3(
@@ -22,7 +22,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            SGUI(KC_Z), LGUI(KC_Z),   KC_UP, LGUI(KC_C), LGUI(KC_X),
       KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                               CAPSWRD,    KC_LEFT, KC_DOWN,   KC_RIGHT, LGUI(KC_V),
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                               QK_BOOT,    KC_HOME, KC_PGDN,    KC_PGUP,     KC_END,
-                                 // XXXXXXX, XXXXXXX, XXXXXXX,              KC_BSPC, KC_ENT, KC_DEL
                                  XXXXXXX, XXXXXXX, XXXXXXX,              KC_BSPC, MO(6), KC_DEL
   ),
 
@@ -44,7 +43,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX,  QMK_M9,        QMK_M4,        QMK_M2, XXXXXXX,                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
       XXXXXXX, QMK_M10, LSFT(KC_LBRC), LSFT(KC_RBRC),  QMK_M1,                               XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI,
       XXXXXXX, QMK_M11,        QMK_M5,        QMK_M3, XXXXXXX,                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                      // QMK_M8, QMK_M7,  QMK_M6,                      XXXXXXX, XXXXXXX, XXXXXXX
                                                 QMK_M7, MO(1), MO(3),               XXXXXXX, XXXXXXX, XXXXXXX
   ),
 
