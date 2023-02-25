@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX, QMK_M10, LSFT(KC_LBRC), LSFT(KC_RBRC),  QMK_M1,                               XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI,
       XXXXXXX, QMK_M11,        QMK_M5,        QMK_M3, XXXXXXX,                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                       // QMK_M8, QMK_M7,  QMK_M6,                      XXXXXXX, XXXXXXX, XXXXXXX
-                                               QMK_M6, QMK_M7,  MO(3),              XXXXXXX, XXXXXXX, XXXXXXX
+                                                QMK_M7, MO(1), MO(3),               XXXXXXX, XXXXXXX, XXXXXXX
   ),
 
   [6] = LAYOUT_split_3x5_3(
