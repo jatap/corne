@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "keycodes.h"
 #include "combos.c"
-#include "macros.c"
 #include "keymap_colemakdh.c"
 
 #define LAYOUT_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)

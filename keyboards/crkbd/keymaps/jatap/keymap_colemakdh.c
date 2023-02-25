@@ -2,10 +2,11 @@
 
 #include "keycodes.h"
 #include "tap_dance.c"
+#include "macros.c"
 
-#define _____________________BASE_L1______________________ KC_Q,   KC_W,   KC_F,                   KC_P,   KC_B
-#define _____________________BASE_L2______________________ HOME_A, HOME_R, HOME_S,                 HOME_T, KC_G
-#define _____________________BASE_L3______________________ KC_Z,   KC_X,   KC_C,                   KC_D,   KC_V
+#define _____________________BASE_L1______________________ KC_Q,   KC_W,   KC_F,   KC_P,   KC_B
+#define _____________________BASE_L2______________________ HOME_A, HOME_R, HOME_S, HOME_T, KC_G
+#define _____________________BASE_L3______________________ KC_Z,   KC_X,   KC_C,   KC_D,   KC_V
 
 #define _____________________BASE_R1______________________ KC_J,   KC_L,   KC_U,       KC_Y,   KC_QUOT
 #define _____________________BASE_R2______________________ KC_M,   HOME_N, HOME_E,     HOME_I, HOME_O
