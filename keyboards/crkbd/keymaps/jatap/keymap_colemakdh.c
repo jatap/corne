@@ -7,9 +7,9 @@
 #define _____________________BASE_L2______________________ HOME_A, HOME_R, HOME_S,                 HOME_T, KC_G
 #define _____________________BASE_L3______________________ KC_Z,   KC_X,   KC_C,                   KC_D,   KC_V
 
-#define _____________________BASE_R1______________________ KC_J,   KC_L,   KC_U,                   KC_Y,   KC_QUOT
-#define _____________________BASE_R2______________________ KC_M,   HOME_N, HOME_E,                 HOME_I, HOME_O
-#define _____________________BASE_R3______________________ KC_K,   KC_H,   TD(TD_COMMA_SEMICOLON), KC_DOT, KC_SLSH
+#define _____________________BASE_R1______________________ KC_J,   KC_L,   KC_U,       KC_Y,   KC_QUOT
+#define _____________________BASE_R2______________________ KC_M,   HOME_N, HOME_E,     HOME_I, HOME_O
+#define _____________________BASE_R3______________________ KC_K,   KC_H,   TD(T_C_SC), KC_DOT, KC_SLSH
 
 #define _____________BASE_LEFT_____________ KC_TAB,    LAYER_NAV, KC_SPC
 #define _____________BASE_RIGHT____________ LAYER_SYM, LAYER_VIM, KC_DEL
