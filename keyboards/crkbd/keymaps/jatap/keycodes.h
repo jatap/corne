@@ -14,6 +14,9 @@ enum custom_keycodes {
     QMK_M9,
     QMK_M10,
     QMK_M11,
+    QMK_M12,
+    QMK_M13,
+    QMK_M14,
 };
 
 // Left-hand home row mods

@@ -51,8 +51,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [6] = LAYOUT_split_3x5_3(
       XXXXXXX, LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), XXXXXXX,              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         KC_F3, HYPR(KC_C),        HYPR(KC_D),       HYPR(KC_F),  QMK_M0,              XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI,
-      XXXXXXX,     KC_F12,        SGUI(KC_4),       HYPR(KC_N), XXXXXXX,              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                         MO(1), XXXXXXX, LCTL(KC_SPACE),     XXXXXXX, XXXXXXX, XXXXXXX
+      XXXXXXX,     KC_F12,        SGUI(KC_4),       HYPR(KC_N), QMK_M14,              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                       QMK_M13, QMK_M12, LCTL(KC_SPACE),     XXXXXXX, XXXXXXX, XXXXXXX
   ),
 };
 
