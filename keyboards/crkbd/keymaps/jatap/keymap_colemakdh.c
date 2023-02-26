@@ -11,8 +11,8 @@
 #define _____________________BASE_R2______________________ KC_M,   HOME_N, HOME_E,     HOME_I, HOME_O
 #define _____________________BASE_R3______________________ KC_K,   KC_H,   TD(T_C_SC), KC_DOT, KC_SLSH
 
-#define _____________BASE_LEFT_____________ KC_TAB,    LAYER_NAV, KC_SPC
-#define _____________BASE_RIGHT____________ LAYER_SYM, LAYER_VIM, KC_DEL
+#define _____________BASE_LEFT_____________ LAYER_MEDIA, LAYER_NAV, LAYER_NUM
+#define _____________BASE_RIGHT____________ LAYER_SYM,   LAYER_VIM, LAYER_APPS
 
 #define _____________________MEDIA_L1_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________MEDIA_L2_____________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
@@ -34,7 +34,7 @@
 #define _____________________NAV_R3_______________________ QK_BOOT,    KC_HOME,    KC_PGDN, KC_PGUP,    KC_END
 
 #define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________NAV_RIGHT_____________ KC_BSPC, MO(6),   KC_DEL
+#define _____________NAV_RIGHT_____________ KC_ENT,  KC_BSPC, KC_DEL
 
 #define _____________________NUM_L1_______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________NUM_L2_______________________ KC_LGUI,  KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
@@ -66,7 +66,7 @@
 #define _____________________VIM_R2_______________________ XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI
 #define _____________________VIM_R3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________VIM_LEFT______________ QMK_M7,  MO(1),   MO(3)
+#define _____________VIM_LEFT______________ QMK_M8,  QMK_M7,  QMK_M6
 #define _____________VIM_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________________APPS_L1______________________ XXXXXXX, LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), XXXXXXX

@@ -38,8 +38,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-    // Free slot
-    // case QMK_M6:
+    case QMK_M6:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_Q) SS_TAP(X_S));
+        }
+        break;
 
     case QMK_M7:
         if (record->event.pressed) {
@@ -47,8 +50,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
-    // Free slot
-    // case QMK_M8:
+    case QMK_M8:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_Q) SS_TAP(X_N));
+        }
+        break;
 
     case QMK_M9:
         if (record->event.pressed) {
