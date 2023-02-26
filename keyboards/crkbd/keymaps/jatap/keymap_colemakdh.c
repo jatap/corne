@@ -34,7 +34,7 @@
 #define _____________________NAV_R3_______________________ QK_BOOT,    KC_HOME,    KC_PGDN, KC_PGUP,    KC_END
 
 #define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________NAV_RIGHT_____________ KC_ENT,  KC_BSPC, KC_DEL
+#define _____________NAV_RIGHT_____________ KC_BSPC,  KC_ENT, KC_DEL
 
 #define _____________________NUM_L1_______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________NUM_L2_______________________ KC_LGUI,  KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX

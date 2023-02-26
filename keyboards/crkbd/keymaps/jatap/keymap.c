@@ -84,8 +84,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_T:
         case HOME_N:
             return TAPPING_TERM + 50;
-        case LAYER_NAV:
-            return TAPPING_TERM + 50;
+        // case LAYER_NAV:
+        //     return TAPPING_TERM + 50;
         default:
             return TAPPING_TERM;
     }
@@ -132,8 +132,8 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        // case LAYER_NAV:
-        case LAYER_NUM:
+        case LAYER_NAV:
+        // case LAYER_NUM:
         case LAYER_SYM:
         case LAYER_VIM:
         case LAYER_APPS:
@@ -148,8 +148,8 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        // case LAYER_NAV:
-        case LAYER_NUM:
+        case LAYER_NAV:
+        // case LAYER_NUM:
         case LAYER_SYM:
         case LAYER_VIM:
         case LAYER_APPS:
