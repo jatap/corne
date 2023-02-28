@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_FORCE_HOLD_PER_KEY
 #define PERMISSIVE_HOLD_PER_KEY
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
-#define TAPPING_TOGGLE 1
+#define TAPPING_TOGGLE 2
 // #define ONESHOT_TAP_TOGGLE 2
 
 // Autoshift
