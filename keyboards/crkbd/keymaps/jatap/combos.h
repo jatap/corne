@@ -5,5 +5,6 @@
 enum combo_events {
     // TMUX,
     CLEAR_SCREEN,
+    SPACE,
     COMBO_LENGTH
 };
