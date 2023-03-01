@@ -5,9 +5,9 @@
 typedef enum {
     _BASE,
     _MEDIA,
-    _NAV,
     _NUM,
-    _SYM,
+    _NAV,
     _VIM,
+    _SYM,
     _APPS,
 } layers_t;

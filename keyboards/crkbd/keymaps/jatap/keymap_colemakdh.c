@@ -11,8 +11,8 @@
 #define _____________________BASE_R2______________________ KC_M,   HOME_N, HOME_E,   HOME_I, HOME_O
 #define _____________________BASE_R3______________________ KC_K,   KC_H,   KC_COMMA, KC_DOT, KC_SLSH
 
-#define _____________BASE_LEFT_____________ LAYER_MEDIA, LAYER_NAV, LAYER_NUM
-#define _____________BASE_RIGHT____________ LAYER_SYM,   LAYER_VIM, LAYER_APPS
+#define _____________BASE_LEFT_____________ LAYER_MEDIA, LAYER_NUM, LAYER_NAV
+#define _____________BASE_RIGHT____________ LAYER_VIM,   LAYER_SYM, LAYER_APPS
 
 #define _____________________MEDIA_L1_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________MEDIA_L2_____________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
@@ -25,17 +25,6 @@
 #define _____________MEDIA_LEFT____________ XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________MEDIA_RIGHT___________ KC_MUTE, KC_MPLY, XXXXXXX
 
-#define _____________________NAV_L1_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________________NAV_L2_______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
-#define _____________________NAV_L3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-
-#define _____________________NAV_R1_______________________ SGUI(KC_Z), LGUI(KC_Z), KC_UP,   LGUI(KC_C), LGUI(KC_X)
-#define _____________________NAV_R2_______________________ CAPSWRD,    KC_LEFT,    KC_DOWN, KC_RIGHT,   LGUI(KC_V)
-#define _____________________NAV_R3_______________________ QK_BOOT,    KC_HOME,    KC_PGDN, KC_PGUP,    KC_END
-
-#define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________NAV_RIGHT_____________ KC_BSPC,  KC_ENT, KC_DEL
-
 #define _____________________NUM_L1_______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________NUM_L2_______________________ KC_LGUI,  KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
 #define _____________________NUM_L3_______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
@@ -47,16 +36,16 @@
 #define _____________NUM_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________NUM_RIGHT_____________ KC_MINS, KC_0,    KC_DOT
 
-#define _____________________SYM_L1_______________________ LSFT(KC_LBRC),  LSFT(KC_7), LSFT(KC_8), LSFT(KC_9), LSFT(KC_RBRC)
-#define _____________________SYM_L2_______________________ LSFT(KC_SCLN),  LSFT(KC_4), LSFT(KC_5), LSFT(KC_6),    KC_KP_PLUS
-#define _____________________SYM_L3_______________________ LSFT(KC_GRAVE), LSFT(KC_1), LSFT(KC_2), LSFT(KC_3), LSFT(KC_BSLS)
+#define _____________________NAV_L1_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________________NAV_L2_______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
+#define _____________________NAV_L3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________________SYM_R1_______________________ XXXXXXX, XXXXXXX,   XXXXXXX,    XXXXXXX, XXXXXXX
-#define _____________________SYM_R2_______________________ XXXXXXX, KC_RSFT,   KC_RCTL,    KC_LALT, KC_RGUI
-#define _____________________SYM_R3_______________________ XXXXXXX, LSA(KC_2), LALT(KC_3), XXXXXXX, XXXXXXX
+#define _____________________NAV_R1_______________________ SGUI(KC_Z), LGUI(KC_Z), KC_UP,   LGUI(KC_C), LGUI(KC_X)
+#define _____________________NAV_R2_______________________ CAPSWRD,    KC_LEFT,    KC_DOWN, KC_RIGHT,   LGUI(KC_V)
+#define _____________________NAV_R3_______________________ QK_BOOT,    KC_HOME,    KC_PGDN, KC_PGUP,    KC_END
 
-#define _____________SYM_LEFT______________ LSFT(KC_9), LSFT(KC_0), LSFT(KC_MINS)
-#define _____________SYM_RIGHT_____________ XXXXXXX,    XXXXXXX,    XXXXXXX
+#define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________NAV_RIGHT_____________ KC_BSPC,  KC_ENT, KC_DEL
 
 #define _____________________VIM_L1_______________________ XXXXXXX, QMK_M9,  QMK_M4,        QMK_M2,         XXXXXXX
 #define _____________________VIM_L2_______________________ XXXXXXX, QMK_M10, LSFT(KC_LBRC), LSFT(KC_RBRC),  QMK_M1
@@ -68,6 +57,17 @@
 
 #define _____________VIM_LEFT______________ QMK_M8,  QMK_M7,  QMK_M6
 #define _____________VIM_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
+
+#define _____________________SYM_L1_______________________ LSFT(KC_LBRC),  LSFT(KC_7), LSFT(KC_8), LSFT(KC_9), LSFT(KC_RBRC)
+#define _____________________SYM_L2_______________________ LSFT(KC_SCLN),  LSFT(KC_4), LSFT(KC_5), LSFT(KC_6),    KC_KP_PLUS
+#define _____________________SYM_L3_______________________ LSFT(KC_GRAVE), LSFT(KC_1), LSFT(KC_2), LSFT(KC_3), LSFT(KC_BSLS)
+
+#define _____________________SYM_R1_______________________ XXXXXXX, XXXXXXX,   XXXXXXX,    XXXXXXX, XXXXXXX
+#define _____________________SYM_R2_______________________ XXXXXXX, KC_RSFT,   KC_RCTL,    KC_LALT, KC_RGUI
+#define _____________________SYM_R3_______________________ XXXXXXX, LSA(KC_2), LALT(KC_3), XXXXXXX, XXXXXXX
+
+#define _____________SYM_LEFT______________ LSFT(KC_9), LSFT(KC_0), LSFT(KC_MINS)
+#define _____________SYM_RIGHT_____________ XXXXXXX,    XXXXXXX,    XXXXXXX
 
 #define _____________________APPS_L1______________________ XXXXXXX, LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), XXXXXXX
 #define _____________________APPS_L2______________________ KC_F3,   HYPR(KC_C), HYPR(KC_D),        HYPR(KC_F),       QMK_M0

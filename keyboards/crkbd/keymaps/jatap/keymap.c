@@ -39,29 +39,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           _____________________MEDIA_L3_____________________,      _____________________MEDIA_R3_____________________,
                          _____________MEDIA_LEFT____________,      _____________MEDIA_RIGHT___________
   ),
-  [_NAV] = LAYOUT_wrapper(
-          _____________________NAV_L1_______________________,      _____________________NAV_R1_______________________,
-          _____________________NAV_L2_______________________,      _____________________NAV_R2_______________________,
-          _____________________NAV_L3_______________________,      _____________________NAV_R3_______________________,
-                         _____________NAV_LEFT______________,      _____________NAV_RIGHT_____________
-  ),
   [_NUM] = LAYOUT_wrapper(
           _____________________NUM_L1_______________________,      _____________________NUM_R1_______________________,
           _____________________NUM_L2_______________________,      _____________________NUM_R2_______________________,
           _____________________NUM_L3_______________________,      _____________________NUM_R3_______________________,
                          _____________NUM_LEFT______________,      _____________NUM_RIGHT_____________
   ),
-  [_SYM] = LAYOUT_wrapper(
-          _____________________SYM_L1_______________________,      _____________________SYM_R1_______________________,
-          _____________________SYM_L2_______________________,      _____________________SYM_R2_______________________,
-          _____________________SYM_L3_______________________,      _____________________SYM_R3_______________________,
-                         _____________SYM_LEFT______________,      _____________SYM_RIGHT_____________
+  [_NAV] = LAYOUT_wrapper(
+          _____________________NAV_L1_______________________,      _____________________NAV_R1_______________________,
+          _____________________NAV_L2_______________________,      _____________________NAV_R2_______________________,
+          _____________________NAV_L3_______________________,      _____________________NAV_R3_______________________,
+                         _____________NAV_LEFT______________,      _____________NAV_RIGHT_____________
   ),
   [_VIM] = LAYOUT_wrapper(
           _____________________VIM_L1_______________________,      _____________________VIM_R1_______________________,
           _____________________VIM_L2_______________________,      _____________________VIM_R2_______________________,
           _____________________VIM_L3_______________________,      _____________________VIM_R3_______________________,
                          _____________VIM_LEFT______________,      _____________VIM_RIGHT_____________
+  ),
+  [_SYM] = LAYOUT_wrapper(
+          _____________________SYM_L1_______________________,      _____________________SYM_R1_______________________,
+          _____________________SYM_L2_______________________,      _____________________SYM_R2_______________________,
+          _____________________SYM_L3_______________________,      _____________________SYM_R3_______________________,
+                         _____________SYM_LEFT______________,      _____________SYM_RIGHT_____________
   ),
   [_APPS] = LAYOUT_wrapper(
           _____________________APPS_L1______________________,      _____________________APPS_R1______________________,
@@ -80,12 +80,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_I:
         case HOME_S:
         case HOME_E:
-            return TAPPING_TERM + 100;
+            return TAPPING_TERM + 50;
         case HOME_T:
         case HOME_N:
-            return TAPPING_TERM + 50;
-        case LAYER_NUM:
-            return TAPPING_TERM + 50;
+            return TAPPING_TERM + 20;
+        // case LAYER_NUM:
+        //     return TAPPING_TERM + 50;
         default:
             return TAPPING_TERM;
     }
@@ -132,10 +132,10 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        case LAYER_NAV:
         case LAYER_NUM:
-        case LAYER_SYM:
+        // case LAYER_NAV:
         case LAYER_VIM:
+        case LAYER_SYM:
         case LAYER_APPS:
             return true;
         default:
@@ -148,10 +148,10 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        case LAYER_NAV:
         case LAYER_NUM:
-        case LAYER_SYM:
+        // case LAYER_NAV:
         case LAYER_VIM:
+        case LAYER_SYM:
         case LAYER_APPS:
             return true;
         default:
