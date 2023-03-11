@@ -3,7 +3,7 @@
 #include QMK_KEYBOARD_H
 
 enum combo_events {
-    // TMUX,
     CLEAR_SCREEN,
+    TAB,
     COMBO_LENGTH
 };

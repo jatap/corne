@@ -11,7 +11,7 @@
 #define _____________________BASE_R2______________________ KC_M,   HOME_N, HOME_E,   HOME_I, HOME_O
 #define _____________________BASE_R3______________________ KC_K,   KC_H,   KC_COMMA, KC_DOT, KC_SLSH
 
-#define _____________BASE_LEFT_____________ LAYER_MEDIA, LAYER_NUM, LAYER_NAV
+#define _____________BASE_LEFT_____________ LAYER_MEDIA, LAYER_NAV, LAYER_NUM
 #define _____________BASE_RIGHT____________ LAYER_VIM,   LAYER_SYM, LAYER_APPS
 
 #define _____________________MEDIA_L1_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
@@ -25,6 +25,17 @@
 #define _____________MEDIA_LEFT____________ XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________MEDIA_RIGHT___________ KC_MUTE, KC_MPLY, XXXXXXX
 
+#define _____________________NAV_L1_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________________NAV_L2_______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
+#define _____________________NAV_L3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define _____________________NAV_R1_______________________ SGUI(KC_Z), LGUI(KC_Z), KC_UP,   LGUI(KC_C), LGUI(KC_X)
+#define _____________________NAV_R2_______________________ CAPSWRD,    KC_LEFT,    KC_DOWN, KC_RIGHT,   LGUI(KC_V)
+#define _____________________NAV_R3_______________________ QK_BOOT,    KC_HOME,    KC_PGDN, KC_PGUP,    KC_END
+
+#define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________NAV_RIGHT_____________ KC_BSPC, MO(6), KC_DEL
+
 #define _____________________NUM_L1_______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________NUM_L2_______________________ KC_LGUI,  KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
 #define _____________________NUM_L3_______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
@@ -35,17 +46,6 @@
 
 #define _____________NUM_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________NUM_RIGHT_____________ KC_MINS, KC_0,    KC_DOT
-
-#define _____________________NAV_L1_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________________NAV_L2_______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
-#define _____________________NAV_L3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-
-#define _____________________NAV_R1_______________________ SGUI(KC_Z), LGUI(KC_Z), KC_UP,   LGUI(KC_C), LGUI(KC_X)
-#define _____________________NAV_R2_______________________ CAPSWRD,    KC_LEFT,    KC_DOWN, KC_RIGHT,   LGUI(KC_V)
-#define _____________________NAV_R3_______________________ QK_BOOT,    KC_HOME,    KC_PGDN, KC_PGUP,    KC_END
-
-#define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________NAV_RIGHT_____________ KC_BSPC,  KC_ENT, KC_DEL
 
 #define _____________________VIM_L1_______________________ XXXXXXX, QMK_M9,  QMK_M4,        QMK_M2,         XXXXXXX
 #define _____________________VIM_L2_______________________ XXXXXXX, QMK_M10, LSFT(KC_LBRC), LSFT(KC_RBRC),  QMK_M1

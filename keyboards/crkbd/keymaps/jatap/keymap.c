@@ -39,17 +39,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           _____________________MEDIA_L3_____________________,      _____________________MEDIA_R3_____________________,
                          _____________MEDIA_LEFT____________,      _____________MEDIA_RIGHT___________
   ),
-  [_NUM] = LAYOUT_wrapper(
-          _____________________NUM_L1_______________________,      _____________________NUM_R1_______________________,
-          _____________________NUM_L2_______________________,      _____________________NUM_R2_______________________,
-          _____________________NUM_L3_______________________,      _____________________NUM_R3_______________________,
-                         _____________NUM_LEFT______________,      _____________NUM_RIGHT_____________
-  ),
   [_NAV] = LAYOUT_wrapper(
           _____________________NAV_L1_______________________,      _____________________NAV_R1_______________________,
           _____________________NAV_L2_______________________,      _____________________NAV_R2_______________________,
           _____________________NAV_L3_______________________,      _____________________NAV_R3_______________________,
                          _____________NAV_LEFT______________,      _____________NAV_RIGHT_____________
+  ),
+  [_NUM] = LAYOUT_wrapper(
+          _____________________NUM_L1_______________________,      _____________________NUM_R1_______________________,
+          _____________________NUM_L2_______________________,      _____________________NUM_R2_______________________,
+          _____________________NUM_L3_______________________,      _____________________NUM_R3_______________________,
+                         _____________NUM_LEFT______________,      _____________NUM_RIGHT_____________
   ),
   [_VIM] = LAYOUT_wrapper(
           _____________________VIM_L1_______________________,      _____________________VIM_R1_______________________,
@@ -132,8 +132,8 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        case LAYER_NUM:
-        // case LAYER_NAV:
+        case LAYER_NAV:
+        // case LAYER_NUM:
         case LAYER_VIM:
         case LAYER_SYM:
         case LAYER_APPS:
@@ -148,8 +148,8 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LAYER_MEDIA:
-        case LAYER_NUM:
-        // case LAYER_NAV:
+        case LAYER_NAV:
+        // case LAYER_NUM:
         case LAYER_VIM:
         case LAYER_SYM:
         case LAYER_APPS:
