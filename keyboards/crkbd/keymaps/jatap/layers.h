@@ -7,7 +7,7 @@ typedef enum {
     _MEDIA,
     _NAV,
     _NUM,
-    _VIM,
     _SYM,
+    _VIM,
     _APPS,
 } layers_t;
