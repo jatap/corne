@@ -92,8 +92,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
+    case QMK_M15:
+        if (record->event.pressed) {
+            SEND_STRING(SS_LCTL(" ") SS_TAP(X_TAB));
+        }
+        break;
+
     }
     return true;
 };
-
-

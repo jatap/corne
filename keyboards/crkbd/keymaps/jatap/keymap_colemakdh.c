@@ -77,5 +77,5 @@
 #define _____________________APPS_R2______________________ XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI
 #define _____________________APPS_R3______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________APPS_LEFT_____________ QMK_M13, QMK_M12, LCTL(KC_SPACE)
+#define _____________APPS_LEFT_____________ QMK_M13, QMK_M12, QMK_M15
 #define _____________APPS_RIGHT____________ XXXXXXX, XXXXXXX, XXXXXXX
