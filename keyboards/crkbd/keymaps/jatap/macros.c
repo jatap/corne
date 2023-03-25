@@ -98,6 +98,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         break;
 
+    case QMK_M16:
+        if (record->event.pressed) {
+            SEND_STRING(SS_LCTL(" ") SS_TAP(X_Z));
+        }
+        break;
+
+    case QMK_M17:
+        if (record->event.pressed) {
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_S) SS_TAP(X_A));
+        }
+        break;
+
     }
     return true;
 };

@@ -59,18 +59,18 @@
 #define _____________SYM_RIGHT_____________ XXXXXXX,    XXXXXXX,    XXXXXXX
 
 #define _____________________VIM_L1_______________________ XXXXXXX, QMK_M9,  QMK_M4,        QMK_M2,         XXXXXXX
-#define _____________________VIM_L2_______________________ XXXXXXX, QMK_M10, LSFT(KC_LBRC), LSFT(KC_RBRC),  QMK_M1
+#define _____________________VIM_L2_______________________ XXXXXXX, QMK_M10, LSFT(KC_LBRC), LSFT(KC_RBRC),  XXXXXXX
 #define _____________________VIM_L3_______________________ XXXXXXX, QMK_M11, QMK_M5,        QMK_M3,         XXXXXXX
 
 #define _____________________VIM_R1_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________VIM_R2_______________________ XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI
 #define _____________________VIM_R3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________VIM_LEFT______________ QMK_M8,  QMK_M7,  QMK_M6
+#define _____________VIM_LEFT______________ QMK_M17,  QMK_M7,  QMK_M1
 #define _____________VIM_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________________APPS_L1______________________ XXXXXXX, LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), XXXXXXX
-#define _____________________APPS_L2______________________ KC_F3,   HYPR(KC_C), HYPR(KC_D),        HYPR(KC_F),       QMK_M0
+#define _____________________APPS_L2______________________ KC_F3,   HYPR(KC_C), HYPR(KC_D),        HYPR(KC_F),       QMK_M16
 #define _____________________APPS_L3______________________ XXXXXXX, KC_F12,     SGUI(KC_4),        HYPR(KC_N),       QMK_M14
 
 #define _____________________APPS_R1______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
