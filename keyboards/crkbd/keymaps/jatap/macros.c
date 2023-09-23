@@ -58,19 +58,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     case QMK_M9:
         if (record->event.pressed) {
-            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_S) SS_TAP(X_T));
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_S));
         }
         break;
 
     case QMK_M10:
         if (record->event.pressed) {
-            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_D) SS_TAP(X_O));
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_L));
         }
         break;
 
     case QMK_M11:
         if (record->event.pressed) {
-            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_D) SS_TAP(X_C));
+            SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_G) SS_TAP(X_F));
         }
         break;
 
