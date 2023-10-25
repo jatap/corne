@@ -66,7 +66,7 @@
 #define _____________________NUM_R2_______________________ XXXXXXX, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI
 #define _____________________NUM_R3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________NUM_LEFT______________ KC_DOT,  KC_0,    KC_MINS
+#define _____________NUM_LEFT______________ KC_DOT,  MO(7),    KC_MINS
 #define _____________NUM_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________________APPS_L1______________________ XXXXXXX, LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), XXXXXXX
@@ -79,3 +79,15 @@
 
 #define _____________APPS_LEFT_____________ QMK_M13, QMK_M12, QMK_M15
 #define _____________APPS_RIGHT____________ XXXXXXX, XXXXXXX, XXXXXXX
+
+#define _____________________NUMR_L1______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________________NUMR_L2______________________ KC_LGUI,  KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
+#define _____________________NUMR_L3______________________ XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define _____________________NUMR_R1______________________ KC_LBRC,  KC_7, KC_8, KC_9, KC_RBRC
+#define _____________________NUMR_R2______________________ KC_SCLN,  KC_4, KC_5, KC_6, KC_EQL
+#define _____________________NUMR_R3______________________ KC_GRAVE, KC_1, KC_2, KC_3, KC_BSLS
+
+#define _____________NUMR_LEFT_____________ XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________NUMR_RIGHT____________ KC_MINS, KC_0,    KC_DOT
+

@@ -10,4 +10,5 @@ typedef enum {
     _SYM,
     _NUM,
     _APPS,
+    _NUMR,
 } layers_t;
