@@ -1,0 +1,65 @@
+/*
+Copyright 2019 @foostan
+Copyright 2020 Drashna Jaelre <@drashna>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#pragma once
+
+// `SPLIT_HAND_PIN` can currently be defined in `info.json`,
+// but can't yet be given a value
+// #define SPLIT_HAND_PIN F4
+
+// Combos
+#define COMBO_TERM 25
+#define COMBO_MOD_TERM 175
+#define COMBO_MUST_HOLD_MODS
+#define EXTRA_SHORT_COMBOS
+#define COMBO_STRICT_TIMER
+
+// Layers
+#define DYNAMIC_KEYMAP_LAYER_COUNT 7
+
+// Tap hold
+#define TAPPING_TERM 200
+#define TAPPING_TERM_PER_KEY
+#define TAPPING_FORCE_HOLD_PER_KEY
+#define PERMISSIVE_HOLD_PER_KEY
+// #define IGNORE_MOD_TAP_INTERRUPT_PER_KEY
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+#define TAPPING_TOGGLE 2
+// #define ONESHOT_TAP_TOGGLE 2
+
+// Autoshift
+#define AUTO_SHIFT_TIMEOUT 175
+#define NO_AUTO_SHIFT_ALPHA
+#define AUTO_SHIFT_NO_SETUP
+
+// Caps word
+#define CAPS_WORD_IDLE_TIMEOUT 3000
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+#define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE, UNICODE_MODE_MACOS, UNICODE_MODE_LINUX
+
+// Corne specifics
+// #ifdef KEYBOARD_crkbd_rev1_legacy
+// #    undef USE_I2C
+// #    define USE_SERIAL
+// #endif
+
+// Select hand configuration
+// #define MASTER_LEFT
+
+// #define USE_SERIAL_PD2

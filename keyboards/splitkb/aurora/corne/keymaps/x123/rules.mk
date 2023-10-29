@@ -13,10 +13,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-RGB_MATRIX_ENABLE = no
-RGBLIGHT_ENABLE = no
-MOUSEKEY_ENABLE = yes    # Mouse keys
-OLED_ENABLE     = no
+# RGB_MATRIX_ENABLE = no
+# RGBLIGHT_ENABLE = no
+# MOUSEKEY_ENABLE = yes    # Mouse keys
+# OLED_ENABLE     = no
 LTO_ENABLE      = yes
 UNICODE_ENABLE  = yes
 DYNAMIC_TAPPING_TERM_ENABLE	= yes
+CONVERT_TO = liatris
