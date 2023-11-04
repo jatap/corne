@@ -89,5 +89,5 @@
 #define _____________________NUMR_R3______________________ KC_GRAVE, KC_1, KC_2, KC_3, KC_BSLS
 
 #define _____________NUMR_LEFT_____________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________NUMR_RIGHT____________ KC_MINS, KC_0,    KC_DOT
+#define _____________NUMR_RIGHT____________ KC_BSPC, KC_0,    KC_DOT
 
