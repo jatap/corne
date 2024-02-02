@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Combos
 #define COMBO_TERM 25
-#define COMBO_MOD_TERM 175
+#define COMBO_MOD_TERM 150
 #define COMBO_MUST_HOLD_MODS
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD_PER_KEY
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 #define TAPPING_TOGGLE 2
-// #define ONESHOT_TAP_TOGGLE 2
+/* #define ONESHOT_TAP_TOGGLE 2 */
 
 // Autoshift
 #define AUTO_SHIFT_TIMEOUT 175
