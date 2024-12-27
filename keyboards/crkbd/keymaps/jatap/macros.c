@@ -123,52 +123,52 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs
+         * @emacs jatap/consult-word-at-point
          * @neovim
          */
         case QMK_M12:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL(" ") SS_TAP(X_LBRC));
+                SEND_STRING(SS_LALT("s") SS_TAP(X_SEMICOLON));
             }
             break;
 
         /**
-         * @emacs
+         * @emacs isearch-forward-thing-at-point
          * @neovim
          */
         case QMK_M13:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL(" ") SS_TAP(X_MINS));
+                SEND_STRING(SS_LALT("s") SS_LALT(SS_TAP(X_DOT)));
             }
             break;
 
         /**
-         * @emacs
+         * @emacs delete-other-windows
          * @neovim
          */
         case QMK_M14:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL(" ") SS_LSFT(SS_TAP(X_BSLS)));
+                SEND_STRING(SS_LCTL("x") SS_TAP(X_1));
             }
             break;
 
         /**
-         * @emacs
+         * @emacs avy-goto-char-2
          * @neovim
          */
         case QMK_M15:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL(" ") SS_TAP(X_TAB));
+                SEND_STRING(SS_LALT("g") SS_TAP(X_SLASH));
             }
             break;
 
         /**
-         * @emacs
+         * @emacs split-window-below
          * @neovim
          */
         case QMK_M16:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL(" ") SS_TAP(X_Z));
+                SEND_STRING(SS_LCTL("x") SS_TAP(X_2));
             }
             break;
 
@@ -198,7 +198,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          */
         case QMK_M19:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL("x") SS_TAP(X_P) SS_TAP(X_B));
+                SEND_STRING(SS_LCTL("x") SS_TAP(X_P) SS_LSFT(SS_TAP(X_B)));
             }
             break;
 
@@ -312,6 +312,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case QMK_M30:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_T) SS_TAP(X_D));
+            }
+            break;
+
+        /**
+         * @emacs split-window-right
+         * @neovim (similar)
+         */
+        case QMK_M31:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("x") SS_TAP(X_3));
             }
             break;
     }
