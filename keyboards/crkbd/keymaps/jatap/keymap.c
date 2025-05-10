@@ -103,23 +103,23 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 }
 #endif
 
-#ifdef IGNORE_MOD_TAP_INTERRUPT_PER_KEY
-bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case HOME_A:
-        case HOME_R:
-        case HOME_S:
-        case HOME_T:
-        case HOME_N:
-        case HOME_E:
-        case HOME_I:
-        case HOME_O:
-            return true;
-        default:
-            return false;
-    }
-}
-#endif
+/* #ifdef IGNORE_MOD_TAP_INTERRUPT_PER_KEY */
+/* bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) { */
+/*     switch (keycode) { */
+/*         case HOME_A: */
+/*         case HOME_R: */
+/*         case HOME_S: */
+/*         case HOME_T: */
+/*         case HOME_N: */
+/*         case HOME_E: */
+/*         case HOME_I: */
+/*         case HOME_O: */
+/*             return true; */
+/*         default: */
+/*             return false; */
+/*     } */
+/* } */
+/* #endif */
 
 #ifdef TAPPING_FORCE_HOLD_PER_KEY
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
