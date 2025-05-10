@@ -89,7 +89,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 15;
         case HOME_S:
         case HOME_E:
-            return TAPPING_TERM - 10;
+            return TAPPING_TERM - 15;
         case HOME_T:
         case HOME_N:
             return TAPPING_TERM - 10;

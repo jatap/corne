@@ -301,7 +301,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          */
         case QMK_M29:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL("c") SS_TAP(X_B) SS_TAP(X_DOT));
+                SEND_STRING(SS_LCTL("x") SS_TAP(X_O));
             }
             break;
 
