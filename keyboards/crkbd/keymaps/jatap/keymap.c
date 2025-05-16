@@ -26,6 +26,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LAYOUT_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 
+// clang-format off
+const char PROGMEM chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] = LAYOUT_split_3x5_3(
+    'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
+              '*', '*', '*',  '*', '*', '*'
+);
+// clang-format on
+
+// clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_wrapper(
           _____________________BASE_L1______________________,      _____________________BASE_R1______________________,
@@ -76,50 +86,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          _____________NUMR_LEFT_____________,      _____________NUMR_RIGHT____________
   ),
 };
-
+// clang-format on
 
 #ifdef TAPPING_TERM_PER_KEY
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case HOME_A:
         case HOME_O:
-            return TAPPING_TERM - 10;
+            /* return TAPPING_TERM - 10; */
         case HOME_R:
         case HOME_I:
-            return TAPPING_TERM - 15;
+            /* return TAPPING_TERM - 10; */
         case HOME_S:
         case HOME_E:
-            return TAPPING_TERM - 15;
+            /* return TAPPING_TERM - 10; */
         case HOME_T:
         case HOME_N:
-            return TAPPING_TERM - 10;
-        /*
-        case LAYER_NUM:
-            return TAPPING_TERM + 20;
-        */
+            /* return TAPPING_TERM - 10; */
         default:
             return TAPPING_TERM;
     }
 }
 #endif
-
-/* #ifdef IGNORE_MOD_TAP_INTERRUPT_PER_KEY */
-/* bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) { */
-/*     switch (keycode) { */
-/*         case HOME_A: */
-/*         case HOME_R: */
-/*         case HOME_S: */
-/*         case HOME_T: */
-/*         case HOME_N: */
-/*         case HOME_E: */
-/*         case HOME_I: */
-/*         case HOME_O: */
-/*             return true; */
-/*         default: */
-/*             return false; */
-/*     } */
-/* } */
-/* #endif */
 
 #ifdef TAPPING_FORCE_HOLD_PER_KEY
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
@@ -139,9 +127,10 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 }
 #endif
 
-#ifdef PERMISSIVE_HOLD_PER_KEY
-bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
+#ifdef CHORDAL_HOLD_PER_KEY
+bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, uint16_t other_keycode, keyrecord_t *other_record) {
+    // Exceptionally allow some one-handed chords for hotkeys
+    switch (tap_hold_keycode) {
         case LAYER_MEDIA:
         case LAYER_NAV:
         case LAYER_NUM:
@@ -150,7 +139,9 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
         case LAYER_APPS:
             return true;
         default:
-            return false;
+            /* return false; */
+            // Otherwise defer to the opposite hands rule
+            return get_chordal_hold_default(tap_hold_record, other_record);
     }
 }
 #endif
@@ -164,8 +155,30 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case LAYER_SYM:
         /* case LAYER_VIM: */
         case LAYER_APPS:
+            // Immediately select the hold action when another key is pressed
             return true;
         default:
+            // Do not select the hold action when another key is pressed
+            return false;
+    }
+}
+#endif
+
+#ifdef PERMISSIVE_HOLD_PER_KEY
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HOME_A:
+        case HOME_T:
+            // Immediately select the hold action when another key is tapped
+            return true;
+        case LAYER_MEDIA:
+        case LAYER_NAV:
+        case LAYER_NUM:
+        case LAYER_SYM:
+        /* case LAYER_VIM: */
+        case LAYER_APPS:
+        default:
+            // Do not select the hold action when another key is tapped
             return false;
     }
 }

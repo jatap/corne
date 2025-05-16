@@ -35,4 +35,6 @@ enum custom_macros {
     QMK_M29,
     QMK_M30,
     QMK_M31,
+    QMK_M32,
+    QMK_M33,
 };

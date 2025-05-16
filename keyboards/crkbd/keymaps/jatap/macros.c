@@ -113,12 +113,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs magit-log-buffer-file (git log for the current file)
+         * @emacs  magit-log-buffer-file (git log for the current file)
          * @neovim (same)
          */
         case QMK_M11:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL("c") SS_TAP(X_G) SS_TAP(X_F));
+                SEND_STRING(SS_LCTL("c") SS_TAP(X_G) SS_TAP(X_I));
             }
             break;
 
@@ -324,6 +324,29 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_3));
             }
             break;
+
+        /**
+         * @emacs set-mark-command (Move point to where the mark was,
+         * and restore the mark from the ring of former marks).
+         * @neovim (similar)
+         */
+        case QMK_M32:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("u") SS_LCTL(SS_TAP(X_SPACE)));
+            }
+            break;
+
+        /**
+         * @emacs Set the mark, pushing it onto the mark ring, without
+         * activating it.
+         * @neovim (similar)
+         */
+        case QMK_M33:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL(" ") SS_LCTL(SS_TAP(X_SPACE)));
+            }
+            break;
+
     }
     return true;
 };
