@@ -109,25 +109,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 }
 #endif
 
-#ifdef TAPPING_FORCE_HOLD_PER_KEY
-bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case HOME_A:
-        case HOME_R:
-        case HOME_S:
-        case HOME_T:
-        case HOME_N:
-        case HOME_E:
-        case HOME_I:
-        case HOME_O:
-            return true;
-        default:
-            return false;
-    }
-}
-#endif
-
-#ifdef CHORDAL_HOLD_PER_KEY
+#ifdef CHORDAL_HOLD
 bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, uint16_t other_keycode, keyrecord_t *other_record) {
     // Exceptionally allow some one-handed chords for hotkeys
     switch (tap_hold_keycode) {
@@ -139,7 +121,6 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, u
         case LAYER_APPS:
             return true;
         default:
-            /* return false; */
             // Otherwise defer to the opposite hands rule
             return get_chordal_hold_default(tap_hold_record, other_record);
     }
@@ -155,6 +136,10 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case LAYER_SYM:
         /* case LAYER_VIM: */
         case LAYER_APPS:
+        case HOME_A:
+        case HOME_T:
+            // Immediately select the hold action when another key is pressed
+            return true;
             // Immediately select the hold action when another key is pressed
             return true;
         default:
@@ -167,18 +152,18 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 #ifdef PERMISSIVE_HOLD_PER_KEY
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case HOME_A:
-        case HOME_T:
-            // Immediately select the hold action when another key is tapped
-            return true;
         case LAYER_MEDIA:
         case LAYER_NAV:
         case LAYER_NUM:
         case LAYER_SYM:
-        /* case LAYER_VIM: */
+            /* case LAYER_VIM: */
         case LAYER_APPS:
+        case HOME_A:
+        case HOME_T:
+            // Immediately select the hold action when another key is pressed
+            return true;
         default:
-            // Do not select the hold action when another key is tapped
+            // Do not select the hold action when another key is pressed
             return false;
     }
 }
