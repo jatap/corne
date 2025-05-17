@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_STRICT_TIMER
 // Layers
 #define DYNAMIC_KEYMAP_LAYER_COUNT 7
+#define LAYER_STATE_8BIT
 // Tap hold
 #define TAPPING_TERM 200
 #define TAPPING_TERM_PER_KEY
