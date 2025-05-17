@@ -21,4 +21,4 @@ LTO_ENABLE          = yes
 SPLIT_KEYBOARD      = yes
 CAPS_WORD_ENABLE    = yes
 AUTO_SHIFT_ENABLE   = no
-TAP_DANCE_ENABLE    = yes
+TAP_DANCE_ENABLE    = no

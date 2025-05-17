@@ -1,5 +1,5 @@
 #include "keycodes.h"
-#include "tap_dance.c"
+/* #include "tap_dance.c" */
 #include "macros.c"
 #include "combos.c"
 
