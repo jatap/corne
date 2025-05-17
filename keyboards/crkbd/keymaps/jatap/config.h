@@ -19,10 +19,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 // Combos
-#define COMBO_TERM 25
+#define COMBO_TERM 40
 #define COMBO_MOD_TERM 150
-#define COMBO_MUST_HOLD_MODS
 #define COMBO_STRICT_TIMER
+/* #define COMBO_NO_TIMER */
+#define EXTRA_EXTRA_LONG_COMBOS
+#define COMBO_KEY_BUFFER_LENGTH 8
+#define COMBO_BUFFER_LENGTH 4
 // Layers
 #define LAYER_STATE_8BIT
 // Tap hold
