@@ -80,15 +80,4 @@
 
 #define _____________APPS_LEFT_____________ QMK_M13, QMK_M12, QMK_M15
 #define _____________APPS_RIGHT____________ XXXXXXX, XXXXXXX, XXXXXXX
-
-#define _____________________NUMR_L1______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________________NUMR_L2______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
-#define _____________________NUMR_L3______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-
-#define _____________________NUMR_R1______________________ KC_LBRC, KC_7, KC_8, KC_9, KC_RBRC
-#define _____________________NUMR_R2______________________ KC_SCLN, KC_4, KC_5, KC_6, KC_EQL
-#define _____________________NUMR_R3______________________ KC_GRAVE, KC_1, KC_2, KC_3, KC_BSLS
-
-#define _____________NUMR_LEFT_____________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________NUMR_RIGHT____________ KC_BSPC, KC_0, KC_DOT
 // clang-format on
