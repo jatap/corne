@@ -22,10 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_TERM 25
 #define COMBO_MOD_TERM 150
 #define COMBO_MUST_HOLD_MODS
-#define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
 // Layers
-#define DYNAMIC_KEYMAP_LAYER_COUNT 7
 #define LAYER_STATE_8BIT
 // Tap hold
 #define TAPPING_TERM 200
