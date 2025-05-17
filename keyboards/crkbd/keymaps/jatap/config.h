@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Layers
 #define DYNAMIC_KEYMAP_LAYER_COUNT 7
 // Tap hold
-#define TAPPING_TERM 175
+#define TAPPING_TERM 200
 #define TAPPING_TERM_PER_KEY
 #define QUICK_TAP_TERM 120
 #define CHORDAL_HOLD
@@ -36,6 +36,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TOGGLE 5
 // Caps word
 #define CAPS_WORD_IDLE_TIMEOUT 3000
+// One shot
+#define NO_ACTION_ONESHOT
 // Corne specifics
 #ifdef KEYBOARD_crkbd_rev1_legacy
 #    undef USE_I2C
