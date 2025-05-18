@@ -5,7 +5,6 @@ BLUETOOTH_ENABLE    = no
 CONSOLE_ENABLE      = no
 COMMAND_ENABLE      = no
 OLED_ENABLE         = no
-OLED_DRIVER         = SSD1306
 AUDIO_ENABLE        = no
 VIAL_INSECURE       = no
 KEY_OVERRIDE_ENABLE = no

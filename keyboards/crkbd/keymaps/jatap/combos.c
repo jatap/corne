@@ -1,3 +1,7 @@
+#pragma once
+
+#include QMK_KEYBOARD_H
+
 #include "combos.h"
 
 // Remove the COMBO_COUNT define and use this instead!
