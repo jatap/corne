@@ -1,5 +1,3 @@
-#pragma once
-
 #include QMK_KEYBOARD_H
 
 enum custom_macros {
@@ -37,4 +35,6 @@ enum custom_macros {
     QMK_M31,
     QMK_M32,
     QMK_M33,
+    QMK_M34,
+    QMK_M35,
 };

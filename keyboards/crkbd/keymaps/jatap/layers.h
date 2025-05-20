@@ -1,7 +1,3 @@
-#pragma once
-
-#include QMK_KEYBOARD_H
-
 typedef enum {
     _BASE,
     _MEDIA,

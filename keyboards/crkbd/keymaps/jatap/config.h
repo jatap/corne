@@ -1,7 +1,7 @@
 #pragma once
 
 // Combos
-#define COMBO_MOD_TERM 150
+#define COMBO_MOD_TERM 40
 /* #define COMBO_STRICT_TIMER */
 #define COMBO_NO_TIMER
 #define EXTRA_EXTRA_LONG_COMBOS
@@ -9,10 +9,11 @@
 // Layers
 #define LAYER_STATE_8BIT
 // Tap hold
+#define QUICK_TAP_TERM 120
 #define TAPPING_TERM 200
 #define TAPPING_TERM_PER_KEY
 #define CHORDAL_HOLD
-#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+/* #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY */
 #define PERMISSIVE_HOLD_PER_KEY
 // One shot
 #define NO_ACTION_ONESHOT
@@ -22,5 +23,7 @@
 #    define USE_SERIAL
 #endif
 
+#define FORCE_NKRO
+
 // Select hand configuration
-#define MASTER_LEFT
+/* #define MASTER_LEFT */

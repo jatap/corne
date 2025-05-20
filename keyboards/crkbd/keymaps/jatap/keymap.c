@@ -72,13 +72,13 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 10;
         case HOME_R:
         case HOME_I:
-            return TAPPING_TERM - 15;
+            /* return TAPPING_TERM - 15; */
         case HOME_S:
         case HOME_E:
-            return TAPPING_TERM - 15;
+            /* return TAPPING_TERM - 15; */
         case HOME_T:
         case HOME_N:
-            return TAPPING_TERM - 10;
+            /* return TAPPING_TERM - 10; */
         default:
             return TAPPING_TERM;
     }
@@ -106,12 +106,20 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, u
 #ifdef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LAYER_MEDIA:
-        case LAYER_NAV:
-        case LAYER_NUM:
-        case LAYER_SYM:
-        /* case LAYER_VIM: */
-        case LAYER_APPS:
+        case HOME_A:
+        case HOME_O:
+        /* case HOME_R: */
+        /* case HOME_I: */
+        /* case HOME_S: */
+        /* case HOME_E: */
+        /* case HOME_T: */
+        /* case HOME_N: */
+        /* case LAYER_MEDIA: */
+        /* case LAYER_NAV: */
+        /* case LAYER_NUM: */
+        /* case LAYER_SYM: */
+        /*** case LAYER_VIM: ***/
+        /* case LAYER_APPS: */
             // Immediately select the hold action when another key is pressed
             return true;
         default:
@@ -124,11 +132,13 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 #ifdef PERMISSIVE_HOLD_PER_KEY
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case HOME_A:
+        case HOME_O:
         case LAYER_MEDIA:
         case LAYER_NAV:
         case LAYER_NUM:
         case LAYER_SYM:
-            /* case LAYER_VIM: */
+        /* case LAYER_VIM: */
         case LAYER_APPS:
             // Immediately select the hold action when another key is pressed
             return true;

@@ -1,7 +1,3 @@
-#pragma once
-
-#include QMK_KEYBOARD_H
-
 #include "macros.h"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -157,12 +153,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs avy-goto-char-2
+         * @emacs replace-regexp-as-diff
          * @neovim
          */
         case QMK_M15:
             if (record->event.pressed) {
-                SEND_STRING(SS_LALT("g") SS_TAP(X_SLASH));
+                SEND_STRING(SS_LALT("s") SS_TAP(X_R));
             }
             break;
 
@@ -348,6 +344,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case QMK_M33:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL(" ") SS_LCTL(SS_TAP(X_SPACE)));
+            }
+            break;
+
+        /**
+         * @emacs julio.antunez.tarin@gmail.com
+         * @neovim
+         */
+        case QMK_M34:
+            if (record->event.pressed) {
+                SEND_STRING("julio.antunez.tarin@gmail.com");
+            }
+            break;
+
+        /**
+         * @emacs julio.antunez.tarin@glowingblue.com
+         * @neovim
+         */
+        case QMK_M35:
+            if (record->event.pressed) {
+                SEND_STRING("julio.antunez.tarin@glowingblue.com");
             }
             break;
 

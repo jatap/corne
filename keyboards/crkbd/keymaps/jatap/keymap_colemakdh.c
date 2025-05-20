@@ -1,9 +1,6 @@
 #pragma once
 
-#include QMK_KEYBOARD_H
-
 #include "keycodes.h"
-/* #include "tap_dance.c" */
 #include "macros.c"
 #include "combos.c"
 
@@ -74,9 +71,9 @@
 #define _____________NUM_LEFT______________ KC_DOT, KC_0, KC_MINS
 #define _____________NUM_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________________APPS_L1______________________ XXXXXXX,     LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), QMK_M31
-#define _____________________APPS_L2______________________ KC_F3,       HYPR(KC_C),           QMK_M33,          QMK_M32, QMK_M16
-#define _____________________APPS_L3______________________ HYPR(KC_SPC),    KC_F12,        HYPR(KC_1),       HYPR(KC_N), QMK_M14
+#define _____________________APPS_L1______________________ KC_F12 ,   LGUI(KC_0), LGUI(KC_KP_MINUS), LGUI(KC_KP_PLUS), QMK_M31
+#define _____________________APPS_L2______________________ KC_F3,   HYPR(KC_SPC),           QMK_M33,          QMK_M32, QMK_M16
+#define _____________________APPS_L3______________________ QMK_M34,      QMK_M35,        HYPR(KC_1),       HYPR(KC_N), QMK_M14
 
 #define _____________________APPS_R1______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________APPS_R2______________________ XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI
