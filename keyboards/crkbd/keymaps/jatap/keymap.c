@@ -78,7 +78,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 10;
         case HOME_T:
         case HOME_N:
-            return TAPPING_TERM - 20;
+            return TAPPING_TERM - 10;
         case LAYER_MEDIA:
         case LAYER_NAV:
         case LAYER_NUM:
@@ -88,6 +88,46 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 30;
         default:
             return TAPPING_TERM;
+    }
+}
+#endif
+
+#ifdef PERMISSIVE_HOLD_PER_KEY
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HOME_T:
+        case HOME_N:
+        case LAYER_MEDIA:
+        case LAYER_NAV:
+        case LAYER_NUM:
+        case LAYER_SYM:
+        /* case LAYER_VIM: */
+        case LAYER_APPS:
+            // Immediately select the hold action when another key is pressed
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed
+            return false;
+    }
+}
+#endif
+
+#ifdef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HOME_T:
+        case HOME_N:
+        case LAYER_MEDIA:
+        case LAYER_NAV:
+        case LAYER_NUM:
+        case LAYER_SYM:
+        /* case LAYER_VIM: */
+        case LAYER_APPS:
+            // Immediately select the hold action when another key is pressed
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed
+            return false;
     }
 }
 #endif
@@ -110,42 +150,21 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 /* } */
 /* #endif */
 
-#ifdef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        /* case HOME_T: */
-        /* case HOME_N: */
-        /* case LAYER_MEDIA: */
-        /* case LAYER_NAV: */
-        /* case LAYER_NUM: */
-        /* case LAYER_SYM: */
-        /*** case LAYER_VIM: ***/
-        /* case LAYER_APPS: */
-        // Immediately select the hold action when another key is pressed
-        return true;
-        default:
-            // Do not select the hold action when another key is pressed
-            return false;
-    }
-}
-#endif
+#ifdef FLOW_TAP_TERM
+uint16_t get_flow_tap_term(uint16_t keycode, keyrecord_t *record, uint16_t prev_keycode) {
+    if (is_flow_tap_key(keycode) && is_flow_tap_key(prev_keycode)) {
+        switch (keycode) {
+            case HOME_T:
+            case HOME_N:
+                // Disable Flow Tap
+                return 0;
 
-#ifdef PERMISSIVE_HOLD_PER_KEY
-bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        /* case HOME_T: */
-        /* case HOME_N: */
-        case LAYER_MEDIA:
-        case LAYER_NAV:
-        case LAYER_NUM:
-        case LAYER_SYM:
-        /* case LAYER_VIM: */
-        case LAYER_APPS:
-            // Immediately select the hold action when another key is pressed
-            return true;
-        default:
-            // Do not select the hold action when another key is pressed
-            return false;
+            default:
+                // Longer timeout otherwise
+                return FLOW_TAP_TERM;
+        }
     }
+    // Disable Flow Tap
+    return 0;
 }
 #endif
