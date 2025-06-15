@@ -10,7 +10,7 @@
 #define LAYER_STATE_8BIT
 // Tap hold
 #define QUICK_TAP_TERM 100
-#define TAPPING_TERM 200
+#define TAPPING_TERM 180
 #define TAPPING_TERM_PER_KEY
 #define CHORDAL_HOLD
 #define FLOW_TAP_TERM 150
