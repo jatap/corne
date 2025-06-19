@@ -69,23 +69,23 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         /* case HOME_A: */
         /* case HOME_O: */
-        /*     return TAPPING_TERM - 10; */
+        /*     return TAPPING_TERM - 20; */
         /* case HOME_R: */
         /* case HOME_I: */
         /*     return TAPPING_TERM - 10; */
         /* case HOME_S: */
         /* case HOME_E: */
         /*     return TAPPING_TERM - 10; */
-        case HOME_T:
-        case HOME_N:
-            return TAPPING_TERM - 10;
-        /* case LAYER_MEDIA: */
-        /* case LAYER_NAV: */
-        /* case LAYER_NUM: */
-        /* case LAYER_SYM: */
-        /* case LAYER_VIM: */
-        /* case LAYER_APPS: */
-        /*     return TAPPING_TERM - 20; */
+        /* case HOME_T: */
+        /* case HOME_N: */
+        /*     return TAPPING_TERM - 10; */
+        case LAYER_MEDIA:
+        case LAYER_NAV:
+        case LAYER_NUM:
+        case LAYER_SYM:
+        case LAYER_VIM:
+        case LAYER_APPS:
+            return TAPPING_TERM - 20;
         default:
             return TAPPING_TERM;
     }
@@ -95,8 +95,14 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 #ifdef PERMISSIVE_HOLD_PER_KEY
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case HOME_T:
-        case HOME_N:
+        /* case HOME_A: */
+        /* case HOME_O: */
+        /* case HOME_R: */
+        /* case HOME_I: */
+        /* case HOME_S: */
+        /* case HOME_E: */
+        /* case HOME_T: */
+        /* case HOME_N: */
         case LAYER_MEDIA:
         case LAYER_NAV:
         case LAYER_NUM:

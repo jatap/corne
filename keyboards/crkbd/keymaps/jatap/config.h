@@ -9,10 +9,10 @@
 // Layers
 #define LAYER_STATE_8BIT
 // Tap hold
-#define QUICK_TAP_TERM 100
-#define TAPPING_TERM 180
+/* #define QUICK_TAP_TERM 100 */
+#define TAPPING_TERM 170
 #define TAPPING_TERM_PER_KEY
-#define CHORDAL_HOLD
+/* #define CHORDAL_HOLD */
 #define FLOW_TAP_TERM 150
 /* #define HOLD_ON_OTHER_KEY_PRESS */
 /* #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY */
