@@ -2,7 +2,6 @@
 
 #include "keycodes.h"
 #include "macros.c"
-#include "combos.c"
 
 // clang-format off
 #define _____________________BASE_L1______________________ KC_Q, KC_W, KC_F, KC_P, KC_B
