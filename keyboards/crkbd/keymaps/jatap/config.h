@@ -6,8 +6,8 @@
 #define QUICK_TAP_TERM 100
 #define TAPPING_TERM 185
 #define TAPPING_TERM_PER_KEY
-/* #define CHORDAL_HOLD */
-#define FLOW_TAP_TERM 150
+// #define CHORDAL_HOLD
+// #define FLOW_TAP_TERM 150
 // #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 #define PERMISSIVE_HOLD_PER_KEY
 // One shot
