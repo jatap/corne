@@ -67,15 +67,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef TAPPING_TERM_PER_KEY
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        /* case HOME_A: */
-        /* case HOME_O: */
-        /*     return TAPPING_TERM - 20; */
-        /* case HOME_R: */
-        /* case HOME_I: */
-        /*     return TAPPING_TERM - 10; */
-        /* case HOME_S: */
-        /* case HOME_E: */
-        /*     return TAPPING_TERM - 10; */
         case HOME_T:
         case HOME_N:
             return TAPPING_TERM - 10;
@@ -85,7 +76,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LAYER_SYM:
         /* case LAYER_VIM: */
         case LAYER_APPS:
-            return TAPPING_TERM - 20;
+            return TAPPING_TERM - 10;
         default:
             return TAPPING_TERM;
     }
