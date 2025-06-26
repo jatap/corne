@@ -19,9 +19,9 @@
 #define _____________________MEDIA_L2_____________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
 #define _____________________MEDIA_L3_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________________MEDIA_R1_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________________MEDIA_R1_____________________ XXXXXXX, DT_PRNT, DT_UP,   DT_DOWN, XXXXXXX
 #define _____________________MEDIA_R2_____________________ XXXXXXX, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT
-#define _____________________MEDIA_R3_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________________MEDIA_R3_____________________ QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________MEDIA_LEFT____________ XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________MEDIA_RIGHT___________ KC_MUTE, KC_MPLY, XXXXXXX
@@ -32,7 +32,7 @@
 
 #define _____________________NAV_R1_______________________ KC_CAPS, LGUI(KC_Z), KC_UP, LGUI(KC_C), LGUI(KC_X)
 #define _____________________NAV_R2_______________________ QK_CAPS_WORD_TOGGLE, KC_LEFT, KC_DOWN, KC_RIGHT, LGUI(KC_V)
-#define _____________________NAV_R3_______________________ QK_BOOT, KC_HOME, KC_PGUP, KC_PGDN, KC_END
+#define _____________________NAV_R3_______________________ XXXXXXX, KC_HOME, KC_PGUP, KC_PGDN, KC_END
 
 #define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________NAV_RIGHT_____________ KC_BSPC, MO(6), KC_DEL

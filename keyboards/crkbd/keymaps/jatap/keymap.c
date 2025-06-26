@@ -2,9 +2,9 @@
 
 #include QMK_KEYBOARD_H
 
-#include "layers.h"
 #include "keycodes.h"
 #include "keymap_colemakdh.c"
+#include "layers.h"
 
 #define LAYOUT_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 
@@ -13,7 +13,7 @@ const char PROGMEM chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] = LAYOUT_split_
     'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
     'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
     'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
-              '*', '*', '*',  '*', '*', '*'
+              'L', 'L', 'L',  'R', 'R', 'R'
 );
 // clang-format on
 
@@ -67,16 +67,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef TAPPING_TERM_PER_KEY
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        /* case HOME_A: */
+        /* case HOME_O: */
+        /* case HOME_R: */
+        /* case HOME_I: */
+        /* case HOME_S: */
+        /* case HOME_E: */
+        /*     return TAPPING_TERM - 20; */
         case HOME_T:
         case HOME_N:
-            return TAPPING_TERM - 10;
+            return TAPPING_TERM - 25;
         case LAYER_MEDIA:
         case LAYER_NAV:
         case LAYER_NUM:
         case LAYER_SYM:
-        /* case LAYER_VIM: */
+        case LAYER_VIM:
         case LAYER_APPS:
-            return TAPPING_TERM - 10;
+            return TAPPING_TERM - 25;
         default:
             return TAPPING_TERM;
     }
@@ -107,11 +114,16 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_flow_tap_term(uint16_t keycode, keyrecord_t *record, uint16_t prev_keycode) {
     if (is_flow_tap_key(keycode) && is_flow_tap_key(prev_keycode)) {
         switch (keycode) {
+            /* case HOME_A: */
+            /* case HOME_O: */
+            /* case HOME_R: */
+            /* case HOME_I: */
+            /* case HOME_S: */
+            /* case HOME_E: */
             case HOME_T:
             case HOME_N:
                 // Disable Flow Tap
                 return 0;
-
             default:
                 // Longer timeout otherwise
                 return FLOW_TAP_TERM;
@@ -122,23 +134,23 @@ uint16_t get_flow_tap_term(uint16_t keycode, keyrecord_t *record, uint16_t prev_
 }
 #endif
 
-#ifdef CHORDAL_HOLD
-bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, uint16_t other_keycode, keyrecord_t *other_record) {
-    // Exceptionally allow some one-handed chords for hotkeys
-    switch (tap_hold_keycode) {
-        case LAYER_MEDIA:
-        case LAYER_NAV:
-        case LAYER_NUM:
-        case LAYER_SYM:
-        /* case LAYER_VIM: */
-        case LAYER_APPS:
-            return true;
-        default:
-            // Otherwise defer to the opposite hands rule
-            return get_chordal_hold_default(tap_hold_record, other_record);
-    }
-}
-#endif
+/* #ifdef CHORDAL_HOLD */
+/* bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, uint16_t other_keycode, keyrecord_t *other_record) { */
+/*     // Exceptionally allow some one-handed chords for hotkeys */
+/*     switch (tap_hold_keycode) { */
+/*         case LAYER_MEDIA: */
+/*         case LAYER_NAV: */
+/*         case LAYER_NUM: */
+/*         case LAYER_SYM: */
+/*         /\* case LAYER_VIM: *\/ */
+/*         case LAYER_APPS: */
+/*             return true; */
+/*         default: */
+/*             // Otherwise defer to the opposite hands rule */
+/*             return get_chordal_hold_default(tap_hold_record, other_record); */
+/*     } */
+/* } */
+/* #endif */
 
 #ifdef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
