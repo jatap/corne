@@ -6,4 +6,5 @@ typedef enum {
     _SYM,
     _NUM,
     _APPS,
+    _EXTRA,
 } layers_t;

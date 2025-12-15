@@ -123,12 +123,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs jatap/consult-word-at-point
+         * @emacs jatap/occur-word-at-point
          * @neovim
          */
         case QMK_M12:
             if (record->event.pressed) {
-                SEND_STRING(SS_LALT("s") SS_TAP(X_SEMICOLON));
+                SEND_STRING(SS_LALT("s") SS_TAP(X_COMMA));
             }
             break;
 
@@ -348,22 +348,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs julio.antunez.tarin@gmail.com
+         * @emacs TODO Empty
          * @neovim
          */
         case QMK_M34:
             if (record->event.pressed) {
-                SEND_STRING("julio.antunez.tarin@gmail.com");
+                SEND_STRING("Empty macro");
             }
             break;
 
         /**
-         * @emacs julio.antunez.tarin@glowingblue.com
+         * @emacs TODO Empty
          * @neovim
          */
         case QMK_M35:
             if (record->event.pressed) {
-                SEND_STRING("julio.antunez.tarin@glowingblue.com");
+                SEND_STRING("Empty macro");
             }
             break;
 

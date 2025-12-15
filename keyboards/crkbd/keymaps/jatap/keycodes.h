@@ -17,3 +17,4 @@
 #define LAYER_SYM LT(4, KC_BSPC)
 #define LAYER_NUM LT(5, KC_ENT)
 #define LAYER_APPS LT(6, KC_DEL)
+#define LAYER_EXTRA MO(7)

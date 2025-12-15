@@ -52,6 +52,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           _____________________APPS_L3______________________,      _____________________APPS_R3______________________,
                          _____________APPS_LEFT_____________,      _____________APPS_RIGHT____________
   ),
+  [_EXTRA] = LAYOUT_wrapper(
+          _____________________EXTRA_L1______________________,      _____________________EXTRA_R1______________________,
+          _____________________EXTRA_L2______________________,      _____________________EXTRA_R2______________________,
+          _____________________EXTRA_L3______________________,      _____________________EXTRA_R3______________________,
+                         _____________EXTRA_LEFT_____________,      _____________EXTRA_RIGHT____________
+  ),
 };
 // clang-format on
 
@@ -74,9 +80,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LAYER_NAV:
         case LAYER_NUM:
         case LAYER_SYM:
-     /* case LAYER_VIM: */
+        /* case LAYER_VIM: */
         case LAYER_APPS:
             return TAPPING_TERM - 30;
+        case LAYER_EXTRA:
+            return TAPPING_TERM - 80;
         default:
             return TAPPING_TERM;
     }
@@ -109,6 +117,7 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
         case LAYER_NUM:
         case LAYER_SYM:
         /* case LAYER_VIM: */
+        /* case LAYER_EXTRA: */
         case LAYER_APPS:
             return true;
         default:
@@ -125,6 +134,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case LAYER_NUM:
         case LAYER_SYM:
         /* case LAYER_VIM: */
+        /* case LAYER_EXTRA: */
         case LAYER_APPS:
             return true;
         default:

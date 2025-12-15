@@ -8,7 +8,7 @@
 #define COMBO_STRICT_TIMER
 
 // Layers
-#define DYNAMIC_KEYMAP_LAYER_COUNT 7
+#define DYNAMIC_KEYMAP_LAYER_COUNT 8
 
 // Tap hold
 #define TAPPING_TERM 200
@@ -28,6 +28,10 @@
 // Caps word
 #define CAPS_WORD_IDLE_TIMEOUT 3000
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+// One shot keys, mostly for Hyper
+#define ONESHOT_TAP_TOGGLE 5
+#define ONESHOT_TIMEOUT 2000
 
 // Corne specifics
 #ifdef KEYBOARD_crkbd_rev1_legacy
