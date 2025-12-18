@@ -21,8 +21,8 @@
 #define _____________________MEDIA_L3_____________________ XXXXXXX,    XXXXXXX,      XXXXXXX,      XXXXXXX, XXXXXXX
 
 #define _____________________MEDIA_R1_____________________ HYPR(KC_F), QMK_M32, HYPR(KC_A), HYPR(KC_T),    HYPR(KC_S)
-#define _____________________MEDIA_R2_____________________ HYPR(KC_H), XXXXXXX, XXXXXXX,    HYPR(KC_BSPC), HYPR(KC_W)
-#define _____________________MEDIA_R3_____________________ HYPR(KC_V), QMK_M33, HYPR(KC_4), HYPR(KC_X),    HYPR(KC_E)
+#define _____________________MEDIA_R2_____________________ QMK_M38,    QMK_M37, QMK_M36,    HYPR(KC_BSPC), HYPR(KC_W)
+#define _____________________MEDIA_R3_____________________ QMK_M39,    QMK_M33, HYPR(KC_4), HYPR(KC_X),    HYPR(KC_E)
 
 #define _____________MEDIA_LEFT____________ XXXXXXX,    XXXXXXX,    XXXXXXX
 #define _____________MEDIA_RIGHT___________ HYPR(KC_R), HYPR(KC_D), LAYER_EXTRA

@@ -367,6 +367,47 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
+        /**
+         * @emacs TODO Empty
+         * @neovim
+         */
+        case QMK_M36:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_1))));
+            }
+            break;
+
+        /**
+         * @emacs TODO Empty
+         * @neovim
+         */
+        case QMK_M37:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_3))));
+            }
+            break;
+
+
+        /**
+         * @emacs TODO Empty
+         * @neovim
+         */
+        case QMK_M38:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_6))));
+            }
+            break;
+
+        /**
+         * @emacs TODO Empty
+         * @neovim
+         */
+        case QMK_M39:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_7))));
+            }
+            break;
+
     }
     return true;
 };
