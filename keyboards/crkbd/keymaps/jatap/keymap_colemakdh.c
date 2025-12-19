@@ -20,9 +20,9 @@
 #define _____________________MEDIA_L2_____________________ KC_LGUI,    KC_LALT,      KC_LCTL,      KC_LSFT, XXXXXXX
 #define _____________________MEDIA_L3_____________________ XXXXXXX,    XXXXXXX,      XXXXXXX,      XXXXXXX, XXXXXXX
 
-#define _____________________MEDIA_R1_____________________ HYPR(KC_F), QMK_M32, HYPR(KC_A), HYPR(KC_T),    HYPR(KC_S)
-#define _____________________MEDIA_R2_____________________ QMK_M38,    QMK_M37, QMK_M36,    HYPR(KC_BSPC), HYPR(KC_W)
-#define _____________________MEDIA_R3_____________________ QMK_M39,    QMK_M33, HYPR(KC_4), HYPR(KC_X),    HYPR(KC_E)
+#define _____________________MEDIA_R1_____________________ HYPR(KC_F), HYPR(KC_7), HYPR(KC_A), HYPR(KC_T),    HYPR(KC_S)
+#define _____________________MEDIA_R2_____________________ QMK_M38,    QMK_M37,    QMK_M36,    HYPR(KC_BSPC), HYPR(KC_W)
+#define _____________________MEDIA_R3_____________________ QMK_M39,    HYPR(KC_8), HYPR(KC_4), HYPR(KC_X),    HYPR(KC_E)
 
 #define _____________MEDIA_LEFT____________ XXXXXXX,    XXXXXXX,    XXXXXXX
 #define _____________MEDIA_RIGHT___________ HYPR(KC_R), HYPR(KC_D), LAYER_EXTRA
@@ -75,9 +75,9 @@
 #define _____________________APPS_L2______________________ XXXXXXX,    MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M16
 #define _____________________APPS_L3______________________ HYPR(KC_U), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M14
 
-#define _____________________APPS_R1______________________ XXXXXXX, XXXXXXX, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
+#define _____________________APPS_R1______________________ XXXXXXX, QMK_M32, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
 #define _____________________APPS_R2______________________ XXXXXXX, KC_RSFT, KC_RCTL,     KC_RALT,     KC_RGUI
-#define _____________________APPS_R3______________________ XXXXXXX, XXXXXXX, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
+#define _____________________APPS_R3______________________ XXXXXXX, QMK_M33, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
 
 #define _____________APPS_LEFT_____________ QMK_M13, QMK_M12, QMK_M15
 #define _____________APPS_RIGHT____________ XXXXXXX, XXXXXXX, XXXXXXX
