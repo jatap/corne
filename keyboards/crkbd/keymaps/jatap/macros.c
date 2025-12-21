@@ -373,7 +373,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          */
         case QMK_M36:
             if (record->event.pressed) {
-                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_1))));
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_2))));
             }
             break;
 
@@ -383,10 +383,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          */
         case QMK_M37:
             if (record->event.pressed) {
-                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_3))));
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_4))));
             }
             break;
-
 
         /**
          * @emacs TODO Empty
@@ -394,7 +393,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          */
         case QMK_M38:
             if (record->event.pressed) {
-                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_6))));
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_1))));
             }
             break;
 
@@ -404,10 +403,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          */
         case QMK_M39:
             if (record->event.pressed) {
-                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_7))));
+                SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_8))));
             }
             break;
-
     }
     return true;
 };
