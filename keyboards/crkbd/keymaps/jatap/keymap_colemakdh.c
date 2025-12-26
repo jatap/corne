@@ -18,7 +18,7 @@
 
 #define _____________________MEDIA_L1_____________________ HYPR(KC_C), HYPR(KC_ESC), HYPR(KC_DEL), XXXXXXX, XXXXXXX
 #define _____________________MEDIA_L2_____________________ KC_LGUI,    KC_LALT,      KC_LCTL,      KC_LSFT, XXXXXXX
-#define _____________________MEDIA_L3_____________________ XXXXXXX,    XXXXXXX,      XXXXXXX,      XXXXXXX, XXXXXXX
+#define _____________________MEDIA_L3_____________________ XXXXXXX,    MEH(KC_Z),    MEH(KC_V),      XXXXXXX, XXXXXXX
 
 #define _____________________MEDIA_R1_____________________ HYPR(KC_F), HYPR(KC_7), HYPR(KC_A), HYPR(KC_T),    HYPR(KC_S)
 #define _____________________MEDIA_R2_____________________ QMK_M38,    QMK_M37,    QMK_M36,    HYPR(KC_BSPC), HYPR(KC_W)
