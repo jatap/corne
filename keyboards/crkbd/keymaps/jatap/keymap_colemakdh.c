@@ -75,9 +75,9 @@
 #define _____________________APPS_L2______________________ XXXXXXX,    MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M16
 #define _____________________APPS_L3______________________ HYPR(KC_U), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M14
 
-#define _____________________APPS_R1______________________ XXXXXXX, QMK_M32, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
-#define _____________________APPS_R2______________________ XXXXXXX, KC_RSFT, KC_RCTL,     KC_RALT,     KC_RGUI
-#define _____________________APPS_R3______________________ XXXXXXX, QMK_M33, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
+#define _____________________APPS_R1______________________ XXXXXXX,    QMK_M32, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
+#define _____________________APPS_R2______________________ HYPR(KC_9), KC_RSFT, KC_RCTL,     KC_RALT,     KC_RGUI
+#define _____________________APPS_R3______________________ HYPR(KC_0), QMK_M33, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
 
 #define _____________APPS_LEFT_____________ QMK_M13, QMK_M12, QMK_M15
 #define _____________APPS_RIGHT____________ XXXXXXX, XXXXXXX, XXXXXXX
