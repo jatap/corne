@@ -19,6 +19,10 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+#if defined(__AVR_ATmega32U4__)
+#    include <avr/io.h>
+#endif
+
 #include "quantum_keycodes.h"
 #include "keycode.h"
 #include "action.h"
