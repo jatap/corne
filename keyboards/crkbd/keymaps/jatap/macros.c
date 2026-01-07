@@ -193,12 +193,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs consult-project-buffer (show opened buffers on the project)
+         * @emacs activities switch buffer (show opened buffers on the project)
          * @neovim (same)
          */
         case QMK_M19:
             if (record->event.pressed) {
-                SEND_STRING(SS_LCTL("x") SS_TAP(X_P) SS_LSFT(SS_TAP(X_B)));
+                SEND_STRING(SS_LGUI(SS_TAP(X_ENTER)) SS_TAP(X_B));
             }
             break;
 
