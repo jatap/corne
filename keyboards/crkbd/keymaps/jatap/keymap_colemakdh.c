@@ -25,7 +25,7 @@
 #define _____________________MEDIA_R3_____________________ QMK_M39,    HYPR(KC_8), HYPR(KC_4), HYPR(KC_X),    HYPR(KC_E)
 
 #define _____________MEDIA_LEFT____________ XXXXXXX,    XXXXXXX,    XXXXXXX
-#define _____________MEDIA_RIGHT___________ HYPR(KC_R), HYPR(KC_D), LAYER_EXTRA
+#define _____________MEDIA_RIGHT___________ HYPR(KC_U), HYPR(KC_D), LAYER_EXTRA
 
 #define _____________________NAV_L1_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________NAV_L2_______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
@@ -73,7 +73,7 @@
 
 #define _____________________APPS_L1______________________ HYPR(KC_Q), LCTL(KC_0), LCTL(KC_KP_MINUS), LCTL(KC_KP_PLUS), QMK_M31
 #define _____________________APPS_L2______________________ XXXXXXX,    MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M16
-#define _____________________APPS_L3______________________ HYPR(KC_U), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M14
+#define _____________________APPS_L3______________________ HYPR(KC_R), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M14
 
 #define _____________________APPS_R1______________________ XXXXXXX,    QMK_M32, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
 #define _____________________APPS_R2______________________ HYPR(KC_9), KC_RSFT, KC_RCTL,     KC_RALT,     KC_RGUI
