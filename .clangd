@@ -1,6 +1,7 @@
 CompileFlags:
     Add:
         [
+            --target=avr,
             -Wno-unknown-attributes,
             -Wno-maybe-uninitialized,
             -Wno-unknown-warning-option,
@@ -11,7 +12,6 @@ CompileFlags:
     Remove:
         [
             -W*,
-            -mmcu=*,
             -mcpu=*,
             -mfpu=*,
             -mfloat-abi=*,
