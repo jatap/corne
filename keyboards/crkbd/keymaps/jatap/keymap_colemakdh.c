@@ -55,7 +55,7 @@
 
 #define _____________________SYM_R1_______________________ XXXXXXX, XXXXXXX,   XXXXXXX,    XXXXXXX, XXXXXXX
 #define _____________________SYM_R2_______________________ XXXXXXX, KC_RSFT,   KC_RCTL,    KC_RALT, KC_RGUI
-#define _____________________SYM_R3_______________________ XXXXXXX, LSA(KC_2), LALT(KC_3), XXXXXXX, XXXXXXX
+#define _____________________SYM_R3_______________________ XXXXXXX, QMK_M34,   QMK_M35,    XXXXXXX, XXXXXXX
 
 #define _____________SYM_LEFT______________ LSFT(KC_9), LSFT(KC_0), LSFT(KC_MINS)
 #define _____________SYM_RIGHT_____________ XXXXXXX,    XXXXXXX,    XXXXXXX

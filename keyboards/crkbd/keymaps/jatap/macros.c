@@ -348,22 +348,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs TODO Empty
+         * Pound sign via Linux Compose: Compose - l
+         * @emacs
          * @neovim
          */
         case QMK_M34:
             if (record->event.pressed) {
-                SEND_STRING("Empty macro");
+                tap_code(KC_CAPS);
+                tap_code(KC_MINS);
+                tap_code(KC_L);
             }
             break;
 
         /**
-         * @emacs TODO Empty
+         * Euro sign via Linux Compose: Compose = e
+         * @emacs
          * @neovim
          */
         case QMK_M35:
             if (record->event.pressed) {
-                SEND_STRING("Empty macro");
+                tap_code(KC_CAPS);
+                tap_code(KC_EQL);
+                tap_code(KC_E);
             }
             break;
 
@@ -406,7 +412,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_8))));
             }
             break;
-
     }
     return true;
 };
