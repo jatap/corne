@@ -22,3 +22,6 @@ SPLIT_KEYBOARD      = yes
 CAPS_WORD_ENABLE    = yes
 AUTO_SHIFT_ENABLE   = yes
 TAP_DANCE_ENABLE    = no
+
+# GCC 16 compatibility; mirrors QMK PR #26216.
+EXTRAFLAGS += -Wunused-but-set-variable=1
