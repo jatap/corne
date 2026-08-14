@@ -53,7 +53,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
 
         case WORKMAIL:
             if (pressed) {
-                send_string("julio.antunez.tarin@glowingblue.com");
+                send_string("julio.antunez.tarin@icloud.com");
             }
             break;
 
