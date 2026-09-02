@@ -286,12 +286,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs consult-imenu (show symbols)
+         * @emacs query-replace
          * @neovim show git UI to perform git operations (lazygit)
          */
-        case QMK_M28:
+        case  QMK_M28:
             if (record->event.pressed) {
-                SEND_STRING(SS_LALT("g") SS_TAP(X_COMM));
+                SEND_STRING(SS_LALT("%"));
             }
             break;
 
