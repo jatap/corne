@@ -3,17 +3,7 @@
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         /**
-         * @emacs
-         * @neovim
-         */
-        case QMK_M0:
-            if (record->event.pressed) {
-                SEND_STRING("cls\n");
-            }
-            break;
-
-        /**
-         * emacs consult-ripgrep (search in project)
+         * @emacs project-find-regexp (search in project)
          * @neovim (same)
          */
         case QMK_M1:
@@ -23,17 +13,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs
-         * @neovim
-         */
-        case QMK_M2:
-            if (record->event.pressed) {
-                SEND_STRING("]d");
-            }
-            break;
-
-        /**
-         * @emacs consult-buffer (show all opened buffers)
+         * @emacs switch-to-buffer (prompt for a buffer)
          * @neovim move to the previous buffer
          */
         case QMK_M3:
@@ -43,32 +23,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs
-         * @neovim
-         */
-        case QMK_M4:
-            if (record->event.pressed) {
-                SEND_STRING("[d");
-            }
-            break;
-
-        /**
-         * @emacs bufler (show all opened buffers with bufler)
+         * @emacs (unbound key, nothing happens)
          * @neovim move to the next buffer
          */
         case QMK_M5:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_B) SS_LSFT(SS_TAP(X_2)));
-            }
-            break;
-
-        /**
-         * @emacs
-         * @neovim
-         */
-        case QMK_M6:
-            if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_Q) SS_TAP(X_S));
             }
             break;
 
@@ -79,16 +39,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case QMK_M7:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_B) SS_TAP(X_D));
-            }
-            break;
-
-        /**
-         * @emacs
-         * @neovim
-         */
-        case QMK_M8:
-            if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_SPACE) SS_TAP(X_Q) SS_TAP(X_N));
             }
             break;
 
@@ -173,7 +123,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs jatap/consult-ripgrep-at-point (search word at point on the project)
+         * @emacs jatap/project-find-regexp-at-point (search word at point on the project)
          * @neovim (same)
          */
         case QMK_M17:
@@ -193,34 +143,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs activities switch buffer (show opened buffers on the project)
+         * @emacs activities-switch-buffer (show buffers of the current activity)
          * @neovim (same)
          */
         case QMK_M19:
             if (record->event.pressed) {
                 SEND_STRING(SS_LGUI(SS_TAP(X_ENTER)) SS_TAP(X_B));
-            }
-            break;
-
-        /**
-         * @emacs git-gutter:previous hunk
-         * @neovim (same)
-         */
-        /* > 42 keys */
-        case QMK_M20:
-            if (record->event.pressed) {
-                SEND_STRING(SS_LCTL("c") SS_TAP(X_G) SS_TAP(X_P));
-            }
-            break;
-
-        /**
-         * @emacs git-gutter:next hunk
-         * @neovim (same)
-         */
-        /* > 42 keys */
-        case QMK_M21:
-            if (record->event.pressed) {
-                SEND_STRING(SS_LCTL("c") SS_TAP(X_G) SS_TAP(X_N));
             }
             break;
 
@@ -245,7 +173,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs consult-line (search in the current buffer)
+         * @emacs occur (search in the current buffer)
          * @neovim (same)
          */
         case QMK_M24:
@@ -275,28 +203,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs project-switch-project
-         * @neovim (same)
-         */
-        /* > 42 keys */
-        case QMK_M27:
-            if (record->event.pressed) {
-                SEND_STRING(SS_LCTL("x") SS_TAP(X_P) SS_TAP(X_P));
-            }
-            break;
-
-        /**
-         * @emacs query-replace
+         * @emacs goto-line
          * @neovim show git UI to perform git operations (lazygit)
          */
         case  QMK_M28:
             if (record->event.pressed) {
-                SEND_STRING(SS_LALT("%"));
+                SEND_STRING(SS_LALT("G") SS_TAP(X_G));
             }
             break;
 
         /**
-         * @emacs ace-window (move focus to the next window)
+         * @emacs other-window (move focus to the next window)
          * @neovim (same)
          */
         case QMK_M29:
@@ -306,7 +223,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs multi-vterm-dedicated-toggle (toggle dedicated term)
+         * @emacs jatap/vterm-new (new vterm session)
          * @neovim (similar)
          */
         case QMK_M30:
@@ -374,8 +291,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs TODO Empty
-         * @neovim
+         * @niri set column width 28% (Super+Ctrl+2)
          */
         case QMK_M36:
             if (record->event.pressed) {
@@ -384,8 +300,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs TODO Empty
-         * @neovim
+         * @niri set column width 44% (Super+Ctrl+4)
          */
         case QMK_M37:
             if (record->event.pressed) {
@@ -394,8 +309,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs TODO Empty
-         * @neovim
+         * @niri set column width 16% (Super+Ctrl+1)
          */
         case QMK_M38:
             if (record->event.pressed) {
@@ -404,8 +318,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs TODO Empty
-         * @neovim
+         * @niri set column width 100% (Super+Ctrl+8)
          */
         case QMK_M39:
             if (record->event.pressed) {

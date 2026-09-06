@@ -2,7 +2,6 @@
 
 enum combo_events {
     TAB,
-    PHPOPEN,
     MULTIARROW,
     DOUBLE_MULTIARROW,
     PERSONALMAIL,
