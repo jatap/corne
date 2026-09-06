@@ -30,8 +30,8 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 
 ```
  HyprC   HyprEsc HyprDel —       —         HyprF   Hypr7   HyprA   HyprT   HyprS
- ⌘       ⌥       ⌃       ⇧       —         M38     M37     M36     HyprBsp HyprW
- —       MehZ    MehV    —       —         M39     Hypr8   Hypr4   HyprX   HyprE
+ ⌘       ⌥       ⌃       ⇧       —         M30     M29     M28     HyprBsp HyprW
+ —       MehZ    MehV    —       —         M31     Hypr8   Hypr4   HyprX   HyprE
 
                                    HyprU   HyprD   Extra
 ```
@@ -60,10 +60,10 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 
 | Macro | Sends          | Acts on | Function              |
 | ----- | -------------- | ------- | --------------------- |
-| M38   | `Super+Ctrl+1` | Niri    | Set column width 16%  |
-| M36   | `Super+Ctrl+2` | Niri    | Set column width 28%  |
-| M37   | `Super+Ctrl+4` | Niri    | Set column width 44%  |
-| M39   | `Super+Ctrl+8` | Niri    | Set column width 100% |
+| M30   | `Super+Ctrl+1` | Niri    | Set column width 16%  |
+| M28   | `Super+Ctrl+2` | Niri    | Set column width 28%  |
+| M29   | `Super+Ctrl+4` | Niri    | Set column width 44%  |
+| M31   | `Super+Ctrl+8` | Niri    | Set column width 100% |
 
 ## Nav (hold left thumb 2)
 
@@ -82,48 +82,48 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 ## Vim (hold left thumb 3)
 
 ```
- —       —       —       —       —         M24     M25     M26     M9      M28
- ⌘       ⌥       ⌃       ⇧       —         M19     M22     M23     M10     M29
- —       —       —       —       —         M18     M3      M5      M11     M30
+ —       —       —       —       —         M17     M18     M19     M4      M20
+ ⌘       ⌥       ⌃       ⇧       —         M14     M15     M16     M5     M21
+ —       —       —       —       —         M13     M1      M2      M6     M22
 
-                                   M1      M7      M17
+                                   M0      M3      M12
 ```
 
 | Macro | Sends            | Acts on      | Function                                      |
 | ----- | ---------------- | ------------ | --------------------------------------------- |
-| M24   | `M-s l`          | Emacs+Neovim | Occur (search in current buffer)              |
-| M25   | `C-x C-j`        | Emacs+Neovim | Dired-jump (open dired at current buffer)     |
-| M26   | `C-c c`          | Emacs+Neovim | Comment line or region                        |
-| M9    | `C-c g s`        | Emacs+Neovim | Magit status (git status)                     |
-| M28   | `M-%`            | Emacs/Neovim | query-replace / git UI (lazygit)              |
-| M19   | `Super+Enter`, b | Emacs+Neovim | Activities: switch buffer of current activity |
-| M22   | `M-{`            | Emacs+Neovim | Backward paragraph                            |
-| M23   | `M-}`            | Emacs+Neovim | Forward paragraph                             |
-| M10   | `C-c g l`        | Emacs+Neovim | Magit log current                             |
-| M29   | `C-x o`          | Emacs+Neovim | Other window                                  |
-| M18   | `C-x p f`        | Emacs+Neovim | Project find file                             |
-| M3    | `C-x b`          | Emacs/Neovim | switch-to-buffer / previous buffer            |
-| M5    | `C-c b @`        | Neovim       | Next buffer (unbound in Emacs)                |
-| M11   | `C-c g i`        | Emacs+Neovim | Magit log for current file                    |
-| M30   | `C-c t d`        | Emacs+Neovim | New vterm session                             |
-| M1    | `C-x p ,`        | Emacs+Neovim | Project find regexp                           |
-| M7    | `C-c b d`        | Emacs+Neovim | Delete window                                 |
-| M17   | `C-x p .`        | Emacs+Neovim | Project find regexp at point                  |
+| M17   | `M-s l`          | Emacs+Neovim | Occur (search in current buffer)              |
+| M18   | `C-x C-j`        | Emacs+Neovim | Dired-jump (open dired at current buffer)     |
+| M19   | `C-c c`          | Emacs+Neovim | Comment line or region                        |
+| M4    | `C-c g s`        | Emacs+Neovim | Magit status (git status)                     |
+| M20   | `M-%`            | Emacs/Neovim | query-replace / git UI (lazygit)              |
+| M14   | `Super+Enter`, b | Emacs+Neovim | Activities: switch buffer of current activity |
+| M15   | `M-{`            | Emacs+Neovim | Backward paragraph                            |
+| M16   | `M-}`            | Emacs+Neovim | Forward paragraph                             |
+| M5    | `C-c g l`        | Emacs+Neovim | Magit log current                             |
+| M21   | `C-x o`          | Emacs+Neovim | Other window                                  |
+| M13   | `C-x p f`        | Emacs+Neovim | Project find file                             |
+| M1    | `C-x b`          | Emacs/Neovim | switch-to-buffer / previous buffer            |
+| M2    | `C-c b @`        | Neovim       | Next buffer (unbound in Emacs)                |
+| M6    | `C-c g i`        | Emacs+Neovim | Magit log for current file                    |
+| M22   | `C-c t d`        | Emacs+Neovim | New vterm session                             |
+| M0    | `C-x p ,`        | Emacs+Neovim | Project find regexp                           |
+| M3    | `C-c b d`        | Emacs+Neovim | Delete window                                 |
+| M12   | `C-x p .`        | Emacs+Neovim | Project find regexp at point                  |
 
 ## Sym (hold right thumb 1)
 
 ```
  {       &       *       (       }         —       —       —       —       —
  :       $       %       ^       +         —       ⇧       ⌃       ⌥       ⌘
- ~       !       @       #       |         —       M34     M35     —       —
+ ~       !       @       #       |         —       M26     M27     —       —
 
  (       )       _
 ```
 
 | Macro | Sends         | Acts on | Function                   |
 | ----- | ------------- | ------- | -------------------------- |
-| M34   | Compose `-` l | System  | Pound sign £ (XKB compose) |
-| M35   | Compose `=` e | System  | Euro sign € (XKB compose)  |
+| M26   | Compose `-` l | System  | Pound sign £ (XKB compose) |
+| M27   | Compose `=` e | System  | Euro sign € (XKB compose)  |
 
 Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri maps to Compose.
 
@@ -142,11 +142,11 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 ## Apps (hold right thumb 3)
 
 ```
- HyprQ   ⌃0      ⌃-      ⌃+      M31       —       M32     Hypr3   Hypr2   HyprRet
- —       MehI    MehB    MehS    M16       Hypr9   ⇧       ⌃       ⌥       ⌘
- HyprR   MehP    Hypr1   HyprN   M14       Hypr0   M33     —       Hypr5   Hypr6
+ HyprQ   ⌃0      ⌃-      ⌃+      M23       —       M24     Hypr3   Hypr2   HyprRet
+ —       MehI    MehB    MehS    M11       Hypr9   ⇧       ⌃       ⌥       ⌘
+ HyprR   MehP    Hypr1   HyprN   M9       Hypr0   M25     —       Hypr5   Hypr6
 
- M13     M12     M15
+ M8     M7     M10
 ```
 
 | Key     | Acts on | Function                     |
@@ -172,14 +172,14 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 
 | Macro | Sends         | Acts on      | Function                                |
 | ----- | ------------- | ------------ | --------------------------------------- |
-| M31   | `C-x 3`       | Emacs+Neovim | Split window right                      |
-| M16   | `C-x 2`       | Emacs+Neovim | Split window below                      |
-| M14   | `C-x 1`       | Emacs+Neovim | Delete other windows                    |
-| M32   | `C-u C-Spc`   | Emacs+Neovim | Move point to previous mark (mark ring) |
-| M33   | `C-Spc C-Spc` | Emacs+Neovim | Set mark without activating             |
-| M13   | `M-s M-.`     | Emacs        | Isearch thing at point                  |
-| M12   | `M-s ,`       | Emacs        | Occur word at point                     |
-| M15   | `M-s r`       | Emacs        | Replace regexp as diff                  |
+| M23   | `C-x 3`       | Emacs+Neovim | Split window right                      |
+| M11   | `C-x 2`       | Emacs+Neovim | Split window below                      |
+| M9    | `C-x 1`       | Emacs+Neovim | Delete other windows                    |
+| M24   | `C-u C-Spc`   | Emacs+Neovim | Move point to previous mark (mark ring) |
+| M25   | `C-Spc C-Spc` | Emacs+Neovim | Set mark without activating             |
+| M8    | `M-s M-.`     | Emacs        | Isearch thing at point                  |
+| M7    | `M-s ,`       | Emacs        | Occur word at point                     |
+| M10   | `M-s r`       | Emacs        | Replace regexp as diff                  |
 
 ## Extra (hold Media right thumb 3)
 

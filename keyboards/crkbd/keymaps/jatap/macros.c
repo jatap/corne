@@ -6,7 +6,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs project-find-regexp (search in project)
          * @neovim (same)
          */
-        case QMK_M1:
+        case QMK_M0:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_P) SS_TAP(X_COMM));
             }
@@ -16,7 +16,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs switch-to-buffer (prompt for a buffer)
          * @neovim move to the previous buffer
          */
-        case QMK_M3:
+        case QMK_M1:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_B));
             }
@@ -26,7 +26,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs (unbound key, nothing happens)
          * @neovim move to the next buffer
          */
-        case QMK_M5:
+        case QMK_M2:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_B) SS_LSFT(SS_TAP(X_2)));
             }
@@ -36,7 +36,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs delete-window
          * @neovim (same)
          */
-        case QMK_M7:
+        case QMK_M3:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_B) SS_TAP(X_D));
             }
@@ -46,7 +46,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs magit-status (git status)
          * @neovim (same)
          */
-        case QMK_M9:
+        case QMK_M4:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_G) SS_TAP(X_S));
             }
@@ -56,7 +56,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs magit-log-current (git log)
          * @neovim (same)
          */
-        case QMK_M10:
+        case QMK_M5:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_G) SS_TAP(X_L));
             }
@@ -66,7 +66,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs  magit-log-buffer-file (git log for the current file)
          * @neovim (same)
          */
-        case QMK_M11:
+        case QMK_M6:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_G) SS_TAP(X_I));
             }
@@ -76,7 +76,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs jatap/occur-word-at-point
          * @neovim
          */
-        case QMK_M12:
+        case QMK_M7:
             if (record->event.pressed) {
                 SEND_STRING(SS_LALT("s") SS_TAP(X_COMMA));
             }
@@ -86,7 +86,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs isearch-forward-thing-at-point
          * @neovim
          */
-        case QMK_M13:
+        case QMK_M8:
             if (record->event.pressed) {
                 SEND_STRING(SS_LALT("s") SS_LALT(SS_TAP(X_DOT)));
             }
@@ -96,7 +96,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs delete-other-windows
          * @neovim
          */
-        case QMK_M14:
+        case QMK_M9:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_1));
             }
@@ -106,7 +106,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs replace-regexp-as-diff
          * @neovim
          */
-        case QMK_M15:
+        case QMK_M10:
             if (record->event.pressed) {
                 SEND_STRING(SS_LALT("s") SS_TAP(X_R));
             }
@@ -116,7 +116,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs split-window-below
          * @neovim
          */
-        case QMK_M16:
+        case QMK_M11:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_2));
             }
@@ -126,7 +126,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs jatap/project-find-regexp-at-point (search word at point on the project)
          * @neovim (same)
          */
-        case QMK_M17:
+        case QMK_M12:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_P) SS_TAP(X_DOT));
             }
@@ -136,7 +136,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs project-find-file
          * @neovim (same)
          */
-        case QMK_M18:
+        case QMK_M13:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_P) SS_TAP(X_F));
             }
@@ -146,7 +146,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs activities-switch-buffer (show buffers of the current activity)
          * @neovim (same)
          */
-        case QMK_M19:
+        case QMK_M14:
             if (record->event.pressed) {
                 SEND_STRING(SS_LGUI(SS_TAP(X_ENTER)) SS_TAP(X_B));
             }
@@ -156,7 +156,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs backward-paragraph
          * @neovim (same)
          */
-        case QMK_M22:
+        case QMK_M15:
             if (record->event.pressed) {
                 SEND_STRING(SS_LALT("{"));
             }
@@ -166,7 +166,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs forward-paragraph
          * @neovim (same)
          */
-        case QMK_M23:
+        case QMK_M16:
             if (record->event.pressed) {
                 SEND_STRING(SS_LALT("}"));
             }
@@ -176,7 +176,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs occur (search in the current buffer)
          * @neovim (same)
          */
-        case QMK_M24:
+        case QMK_M17:
             if (record->event.pressed) {
                 SEND_STRING(SS_LALT("s") SS_TAP(X_L));
             }
@@ -186,7 +186,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs dired-jump (open dired with the location of the current buffer)
          * @neovim (same)
          */
-        case QMK_M25:
+        case QMK_M18:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_LCTL("j"));
             }
@@ -196,7 +196,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs comment-line (comment current line or region)
          * @neovim (same)
          */
-        case QMK_M26:
+        case QMK_M19:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_C));
             }
@@ -206,7 +206,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs goto-line
          * @neovim show git UI to perform git operations (lazygit)
          */
-        case  QMK_M28:
+        case QMK_M20:
             if (record->event.pressed) {
                 SEND_STRING(SS_LALT("G") SS_TAP(X_G));
             }
@@ -216,7 +216,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs other-window (move focus to the next window)
          * @neovim (same)
          */
-        case QMK_M29:
+        case QMK_M21:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_O));
             }
@@ -226,7 +226,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs jatap/vterm-new (new vterm session)
          * @neovim (similar)
          */
-        case QMK_M30:
+        case QMK_M22:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("c") SS_TAP(X_T) SS_TAP(X_D));
             }
@@ -236,7 +236,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs split-window-right
          * @neovim (similar)
          */
-        case QMK_M31:
+        case QMK_M23:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("x") SS_TAP(X_3));
             }
@@ -247,7 +247,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * and restore the mark from the ring of former marks).
          * @neovim (similar)
          */
-        case QMK_M32:
+        case QMK_M24:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL("u") SS_LCTL(SS_TAP(X_SPACE)));
             }
@@ -258,7 +258,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * activating it.
          * @neovim (similar)
          */
-        case QMK_M33:
+        case QMK_M25:
             if (record->event.pressed) {
                 SEND_STRING(SS_LCTL(" ") SS_LCTL(SS_TAP(X_SPACE)));
             }
@@ -269,7 +269,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs
          * @neovim
          */
-        case QMK_M34:
+        case QMK_M26:
             if (record->event.pressed) {
                 tap_code(KC_CAPS);
                 tap_code(KC_MINS);
@@ -282,7 +282,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          * @emacs
          * @neovim
          */
-        case QMK_M35:
+        case QMK_M27:
             if (record->event.pressed) {
                 tap_code(KC_CAPS);
                 tap_code(KC_EQL);
@@ -293,7 +293,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         /**
          * @niri set column width 28% (Super+Ctrl+2)
          */
-        case QMK_M36:
+        case QMK_M28:
             if (record->event.pressed) {
                 SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_2))));
             }
@@ -302,7 +302,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         /**
          * @niri set column width 44% (Super+Ctrl+4)
          */
-        case QMK_M37:
+        case QMK_M29:
             if (record->event.pressed) {
                 SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_4))));
             }
@@ -311,7 +311,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         /**
          * @niri set column width 16% (Super+Ctrl+1)
          */
-        case QMK_M38:
+        case QMK_M30:
             if (record->event.pressed) {
                 SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_1))));
             }
@@ -320,7 +320,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         /**
          * @niri set column width 100% (Super+Ctrl+8)
          */
-        case QMK_M39:
+        case QMK_M31:
             if (record->event.pressed) {
                 SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_8))));
             }

@@ -21,8 +21,8 @@
 #define _____________________MEDIA_L3_____________________ XXXXXXX,    XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________________MEDIA_R1_____________________ HYPR(KC_F), HYPR(KC_7), HYPR(KC_A), HYPR(KC_T),    HYPR(KC_S)
-#define _____________________MEDIA_R2_____________________ QMK_M38,    QMK_M37,    QMK_M36,    HYPR(KC_BSPC), HYPR(KC_W)
-#define _____________________MEDIA_R3_____________________ QMK_M39,    HYPR(KC_8), HYPR(KC_4), HYPR(KC_X),    HYPR(KC_E)
+#define _____________________MEDIA_R2_____________________ QMK_M30,    QMK_M29,    QMK_M28,    HYPR(KC_BSPC), HYPR(KC_W)
+#define _____________________MEDIA_R3_____________________ QMK_M31,    HYPR(KC_8), HYPR(KC_4), HYPR(KC_X),    HYPR(KC_E)
 
 #define _____________MEDIA_LEFT____________ XXXXXXX,    XXXXXXX,    XXXXXXX
 #define _____________MEDIA_RIGHT___________ HYPR(KC_U), HYPR(KC_D), LAYER_EXTRA
@@ -42,12 +42,12 @@
 #define _____________________VIM_L2_______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
 #define _____________________VIM_L3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________________VIM_R1_______________________ QMK_M24, QMK_M25, QMK_M26, QMK_M9,  QMK_M28
-#define _____________________VIM_R2_______________________ QMK_M19, QMK_M22, QMK_M23, QMK_M10, QMK_M29
-#define _____________________VIM_R3_______________________ QMK_M18, QMK_M3,  QMK_M5,  QMK_M11, QMK_M30
+#define _____________________VIM_R1_______________________ QMK_M17, QMK_M18, QMK_M19, QMK_M4, QMK_M20
+#define _____________________VIM_R2_______________________ QMK_M14, QMK_M15, QMK_M16, QMK_M5, QMK_M21
+#define _____________________VIM_R3_______________________ QMK_M13, QMK_M1,  QMK_M2,  QMK_M6, QMK_M22
 
 #define _____________VIM_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________VIM_RIGHT_____________ QMK_M1,  QMK_M7,  QMK_M17
+#define _____________VIM_RIGHT_____________ QMK_M0,  QMK_M3,  QMK_M12
 
 #define _____________________SYM_L1_______________________ LSFT(KC_LBRC),  LSFT(KC_7), LSFT(KC_8), LSFT(KC_9), LSFT(KC_RBRC)
 #define _____________________SYM_L2_______________________ LSFT(KC_SCLN),  LSFT(KC_4), LSFT(KC_5), LSFT(KC_6), KC_KP_PLUS
@@ -55,7 +55,7 @@
 
 #define _____________________SYM_R1_______________________ XXXXXXX, XXXXXXX,   XXXXXXX,    XXXXXXX, XXXXXXX
 #define _____________________SYM_R2_______________________ XXXXXXX, KC_RSFT,   KC_RCTL,    KC_RALT, KC_RGUI
-#define _____________________SYM_R3_______________________ XXXXXXX, QMK_M34,   QMK_M35,    XXXXXXX, XXXXXXX
+#define _____________________SYM_R3_______________________ XXXXXXX, QMK_M26,   QMK_M27,    XXXXXXX, XXXXXXX
 
 #define _____________SYM_LEFT______________ LSFT(KC_9), LSFT(KC_0), LSFT(KC_MINS)
 #define _____________SYM_RIGHT_____________ XXXXXXX,    XXXXXXX,    XXXXXXX
@@ -64,22 +64,22 @@
 #define _____________________NUM_L2_______________________ KC_SCLN,  KC_4, KC_5, KC_6, KC_EQL
 #define _____________________NUM_L3_______________________ KC_GRAVE, KC_1, KC_2, KC_3, KC_BSLS
 
-#define _____________________NUM_R1_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________________NUM_R2_______________________ XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI
-#define _____________________NUM_R3_______________________ KC_A, OSM(MOD_HYPR), OSM(MOD_MEH), XXXXXXX, XXXXXXX
+#define _____________________NUM_R1_______________________ XXXXXXX, XXXXXXX,       XXXXXXX,      XXXXXXX, XXXXXXX
+#define _____________________NUM_R2_______________________ XXXXXXX, KC_RSFT,       KC_RCTL,      KC_RALT, KC_RGUI
+#define _____________________NUM_R3_______________________ KC_A,    OSM(MOD_HYPR), OSM(MOD_MEH), XXXXXXX, XXXXXXX
 
 #define _____________NUM_LEFT______________ KC_DOT,  KC_0,    KC_MINS
 #define _____________NUM_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________________APPS_L1______________________ HYPR(KC_Q), LCTL(KC_0), LCTL(KC_KP_MINUS), LCTL(KC_KP_PLUS), QMK_M31
-#define _____________________APPS_L2______________________ XXXXXXX,    MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M16
-#define _____________________APPS_L3______________________ HYPR(KC_R), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M14
+#define _____________________APPS_L1______________________ HYPR(KC_Q), LCTL(KC_0), LCTL(KC_KP_MINUS), LCTL(KC_KP_PLUS), QMK_M23
+#define _____________________APPS_L2______________________ XXXXXXX,    MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M11
+#define _____________________APPS_L3______________________ HYPR(KC_R), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M9
 
-#define _____________________APPS_R1______________________ XXXXXXX,    QMK_M32, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
+#define _____________________APPS_R1______________________ XXXXXXX,    QMK_M24, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
 #define _____________________APPS_R2______________________ HYPR(KC_9), KC_RSFT, KC_RCTL,     KC_RALT,     KC_RGUI
-#define _____________________APPS_R3______________________ HYPR(KC_0), QMK_M33, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
+#define _____________________APPS_R3______________________ HYPR(KC_0), QMK_M25, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
 
-#define _____________APPS_LEFT_____________ QMK_M13, QMK_M12, QMK_M15
+#define _____________APPS_LEFT_____________ QMK_M8, QMK_M7, QMK_M10
 #define _____________APPS_RIGHT____________ XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________________EXTRA_L1______________________ KC_F10,  KC_F9,   KC_F8,   KC_F7,   KC_F6
