@@ -214,6 +214,14 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 - One-shot Hyper and Meh live on the Num layer, with `ONESHOT_TIMEOUT 2000` and `ONESHOT_TAP_TOGGLE 5`.
 - Macros tagged `@emacs` / `@neovim` / `@niri` are documented in `macros.c`.
 
+## Hardware and recovery
+
+- Board: foostan Corne rev1 hotswap, USB-C plugged into the left half. `MASTER_LEFT` in `config.h` matches this setup.
+- Build from the repo root with `PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap`. Flash only when you intend to write firmware: `PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap:flash`.
+- Normal bootloader entry: hold left thumb 1 (Media), then right thumb 3 on that layer (Extra), then press `QK_BOOT` at the outer left palm-row key.
+- Emergency bootloader entry, for when `QK_BOOT` is unreachable: unplug USB-C, hold the top-left key (`Q`), plug in while still holding, wait a few seconds, then release. This runs QMK Bootmagic Lite, clears EEPROM settings, and jumps to the Caterina bootloader.
+- Bootloader evidence: `dmesg` shows `2341:0037 Arduino Micro` and `ttyACM0`. Normal firmware shows `4653:0001 foostan Corne`. Caterina returns to normal firmware after about 8 seconds if no flash starts.
+
 ## Files
 
 - `keymap.c`, `keymap_colemakdh.c` — layer layouts
