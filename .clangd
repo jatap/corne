@@ -78,9 +78,10 @@ CompileFlags:
 # ARM boards in this checkout: SplitKB (Aurora Corne, Kyria) and Beekeeb.
 # The Aurora Corne rev1 keymap selects its MCU with `CONVERT_TO = liatris` in
 # its own rules.mk, which maps the Elite-C footprint onto RP2044 through
-# platforms/chibios/converters/elite_c_to_liatris. To work on that board:
+# platforms/chibios/converters/elite_c_to_liatris. A normal firmware build only
+# needs `make splitkb/aurora/corne/rev1:jatap`. Regenerate the clangd database
+# only when switching boards or changing build flags:
 #   .venv/bin/qmk generate-compilation-database -kb splitkb/aurora/corne/rev1 -km jatap
-#   make splitkb/aurora/corne/rev1:jatap
 # generate-compilation-database runs `make clean` and only dry-runs make, so it
 # deletes the generated headers under .build/ without rebuilding them. Always
 # follow it with the real build, or clangd reports 'default_keyboard.h' file not

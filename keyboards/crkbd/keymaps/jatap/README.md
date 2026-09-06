@@ -214,6 +214,23 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 - One-shot Hyper and Meh live on the Num layer, with `ONESHOT_TIMEOUT 2000` and `ONESHOT_TAP_TOGGLE 5`.
 - Macros tagged `@emacs` / `@neovim` / `@niri` are documented in `macros.c`.
 
+## Build and clangd database
+
+For a normal firmware build, run only this command from the repo root:
+
+```sh
+PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap
+```
+
+Regenerate the clangd database only when it is missing, after switching back from another board, after changing build flags in `rules.mk` or `info.json`, or after updating QMK or the toolchain:
+
+```sh
+.venv/bin/qmk generate-compilation-database -kb crkbd -km jatap
+PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap
+```
+
+`generate-compilation-database` rewrites the repo-level `compile_commands.json` and runs `make clean`, so always run the real build afterwards. Clangd reads one database for the whole repo; after working on the SplitKB Aurora Corne, regenerate the crkbd database before trusting LSP diagnostics in this directory.
+
 ## Hardware and recovery
 
 - Board: foostan Corne rev1 hotswap, USB-C plugged into the left half. `MASTER_LEFT` in `config.h` matches this setup.
