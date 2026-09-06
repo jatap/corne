@@ -1,7 +1,29 @@
+# clangd reads this file; the Makefile does not.
+#
+# Target selection works like this: clangd keeps the compiler named in
+# compile_commands.json (avr-gcc, arm-none-eabi-gcc) and infers the toolchain
+# from that name. So `CompileFlags.Compiler` must stay unset -- setting it to
+# clang drops the name, and clang then refuses -mmcu/-mcpu because its default
+# triple is the host x86 one. clang cannot infer a triple from -mmcu/-mcpu.
+#
+# That inference covers every file the active database lists. Fragments below
+# pin the triple for keymap directories the database does not cover, because
+# compile_commands.json holds one keyboard at a time. Fragments merge in
+# document order and the last --target= on the command line wins.
+#
+# Optional: starting clangd with
+#   --query-driver='**/avr-gcc,**/arm-none-eabi-gcc'
+# makes it probe the real compiler for system include directories. Not needed
+# here, since QMK writes those directories into the database as -isystem flags.
 CompileFlags:
     Add:
         [
-            --target=avr,
+            # avr-libc has no limits.h, so clang's builtin limits.h used
+            # #include_next to reach host glibc headers, which failed on
+            # 'gnu/stubs-32.h'. Keep the host C library out of the search path.
+            # Toolchain headers arrive as explicit -isystem entries from the
+            # database and from the driver query, and both survive this flag.
+            -nostdlibinc,
             -Wno-unknown-attributes,
             -Wno-maybe-uninitialized,
             -Wno-unknown-warning-option,
@@ -12,7 +34,6 @@ CompileFlags:
     Remove:
         [
             -W*,
-            -mcpu=*,
             -mfpu=*,
             -mfloat-abi=*,
             -mno-unaligned-access,
@@ -21,7 +42,6 @@ CompileFlags:
             -D__has_include*,
             -mlra,
         ]
-    Compiler: clang
 Diagnostics:
     UnusedIncludes: None
     Suppress:
@@ -31,5 +51,53 @@ Diagnostics:
             invalid_asm_value_for_constraint,
             anyx86_interrupt_attribute,
             init_element_not_constant,
+            # keymaps that list several input modes write
+            # `#define UNICODE_SELECTED_MODES A, B, C`, which quantum/unicode/
+            # unicode.c then uses inside `#if ... != -1`. GCC tolerates the comma
+            # in a preprocessor expression, clang does not.
+            pp_expected_eol,
             -Wimplicit-function-declaration
+        ]
+---
+# AVR boards edited here (Crkbd, atmega32u4): `make crkbd:jatap`.
+If:
+    PathMatch:
+        - (^|.*/)keyboards/crkbd/.*
+        - (^|.*/)\.build/obj_crkbd.*
+CompileFlags:
+    Add:
+        [
+            --target=avr,
+        ]
+    # -mcpu only exists for ARM, and clang rejects it under the AVR triple.
+    Remove:
+        [
+            -mcpu=*,
+        ]
+---
+# ARM boards in this checkout: SplitKB (Aurora Corne, Kyria) and Beekeeb.
+# The Aurora Corne rev1 keymap selects its MCU with `CONVERT_TO = liatris` in
+# its own rules.mk, which maps the Elite-C footprint onto RP2044 through
+# platforms/chibios/converters/elite_c_to_liatris. To work on that board:
+#   .venv/bin/qmk generate-compilation-database -kb splitkb/aurora/corne/rev1 -km jatap
+#   make splitkb/aurora/corne/rev1:jatap
+# generate-compilation-database runs `make clean` and only dry-runs make, so it
+# deletes the generated headers under .build/ without rebuilding them. Always
+# follow it with the real build, or clangd reports 'default_keyboard.h' file not
+# found for every file. One database serves the whole repo, so the other board's
+# files are mis-parsed until you switch it back.
+If:
+    PathMatch:
+        - (^|.*/)keyboards/(splitkb|beekeeb)/.*
+        - (^|.*/)\.build/obj_(splitkb|beekeeb).*
+CompileFlags:
+    Add:
+        [
+            --target=arm-none-eabi,
+        ]
+    # -mmcu only exists on the AVR command line, and clang rejects it once the
+    # triple is ARM. Harmless when the database came from an ARM build.
+    Remove:
+        [
+            -mmcu=*,
         ]
