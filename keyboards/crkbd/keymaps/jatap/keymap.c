@@ -84,8 +84,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LAYER_APPS:
             return TAPPING_TERM - 30;
         case LAYER_EXTRA:
-            return TAPPING_TERM - 80;
-        default:
+            return TAPPING_TERM - 120;
+    default:
             return TAPPING_TERM;
     }
 }
