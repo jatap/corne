@@ -2,12 +2,16 @@
 
 // Combos
 #define COMBO_TERM 25
+// COMBO_MOD_TERM and COMBO_MUST_HOLD_MODS are inert while no combo in
+// combos.c uses modifier keys; kept for future mod-combos.
 #define COMBO_MOD_TERM 150
 #define COMBO_MUST_HOLD_MODS
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
 
 // Layers
+// Only consumed by VIA/VIAL dynamic keymaps (both disabled in rules.mk);
+// kept in case VIA is enabled.
 #define DYNAMIC_KEYMAP_LAYER_COUNT 8
 
 // Tap hold
@@ -17,6 +21,7 @@
 #define TAPPING_FORCE_HOLD_PER_KEY
 #define PERMISSIVE_HOLD_PER_KEY
 /* #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY */
+// Only used by TT() keys; the layout has none. Kept for future use.
 #define TAPPING_TOGGLE 2
 /* #define ONESHOT_TAP_TOGGLE 2 */
 
