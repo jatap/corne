@@ -201,6 +201,8 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 - Layer thumbs (Niri, Nav, Sym, Num, Apps) are `LT()` keys with permissive hold enabled, so tapping one and rolling into another key inside the tapping term activates the layer. Two intentional toggles: `HOLD_ON_OTHER_KEY_PRESS_PER_KEY` stays commented out, so `get_hold_on_other_key_press()` in `keymap.c` is not compiled (uncomment the define to activate it); `TAPPING_FORCE_HOLD_PER_KEY` compiles `get_tapping_force_hold()`, but this QMK tree's core no longer calls it — the feature became `QUICK_TAP_TERM` (see `docs/ChangeLog/20230226.md` in the firmware tree).
 - Tapping terms are shortened per key: home-row mods by 10-30 ms, layer thumbs by 30 ms (see `keymap.c`).
 - Auto-shift is enabled for digits and symbols only (`NO_AUTO_SHIFT_ALPHA`, 175 ms timeout). Holding a letter does nothing special; holding `1` types `!`.
+- Zoom keys on the Apps layer (`Ctrl+0`, `Ctrl+Kp-`, `Ctrl+Kp+`) exist to keep zooming consistent across Emacs, Zen Browser, and kitty: the same chords reset or change zoom/size in all three.
+- Accepted side effects: inside pi, `Ctrl+X` copies the message and `Ctrl+C` copies the selection (clears the editor on a second press). The Emacs macros target Emacs; pi keybindings stay untouched.
 - Macros tagged `@emacs` / `@niri` are documented in `macros.c`.
 
 ## Build and clangd database
