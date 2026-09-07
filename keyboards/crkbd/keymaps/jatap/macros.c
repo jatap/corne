@@ -21,7 +21,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         /**
-         * @emacs (unbound key, nothing happens)
+         * @emacs ibuffer (list buffers)
          */
         case QMK_M2:
             if (record->event.pressed) {

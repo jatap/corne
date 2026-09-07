@@ -93,7 +93,7 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 | M21   | `C-x o`          | Emacs   | Other window                                  |
 | M13   | `C-x p f`        | Emacs   | Project find file                             |
 | M1    | `C-x b`          | Emacs   | switch-to-buffer (prompt for a buffer)        |
-| M2    | `C-c b @`        | —       | Next buffer (unbound in Emacs)                |
+| M2    | `C-c b @`        | Emacs   | Ibuffer (list buffers)                        |
 | M6    | `C-c g i`        | Emacs   | Magit log for current file                    |
 | M22   | `C-c t d`        | Emacs   | New vterm session                             |
 | M0    | `C-x p ,`        | Emacs   | Project find regexp                           |
