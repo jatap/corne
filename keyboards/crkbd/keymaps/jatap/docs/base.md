@@ -1,5 +1,6 @@
 # Base
 
++----------+-----------------+-----------------+-------------------------------------+
 | Position | Key             | Chord           | Does                                |
 | -------- | --------------- | --------------- | ----------------------------------- |
 | L1-1     | Q               | Q               | Types q                             |
@@ -38,13 +39,17 @@
 | RT-1     | Backspace / Sym | Backspace / Sym | Backspace on tap; Sym layer on hold |
 | RT-2     | Enter / Num     | Enter / Num     | Enter on tap; Num layer on hold     |
 | RT-3     | Delete / Apps   | Delete / Apps   | Delete on tap; Apps layer on hold   |
++----------+-----------------+-----------------+-------------------------------------+
 
-| ROW   | 1         | 2       | 3        | 4         | 5   |     | 1   | 2         | 3        | 4       | 5         |
-| ----- | --------- | ------- | -------- | --------- | --- | --- | --- | --------- | -------- | ------- | --------- |
-| L1    | Q         | W       | F        | P         | B   |     | J   | L         | U        | Y       | '         |
-| L2    | Super / A | Alt / R | Ctrl / S | Shift / T | G   |     | M   | Shift / N | Ctrl / E | Alt / I | Super / O |
-| L3    | Z         | X       | C        | D         | V   |     | K   | H         | ,        | .       | /         |
-| THUMB | Niri      | Nav     | Emacs    |           |     |     | Sym | Num       | Apps     |         |           |
++--------+-----------+---------+----------+-----------+-----+-----+-----+-----------+----------+---------+-----------+
+| ROW    | 1         | 2       | 3        | 4         | 5   |     | 1   | 2         | 3        | 4       | 5         |
++--------+-----------+---------+----------+-----------+-----+-----+-----+-----------+----------+---------+-----------+
+| L1     | Q         | W       | F        | P         | B   |     | J   | L         | U        | Y       | '         |
+| L2     | Super / A | Alt / R | Ctrl / S | Shift / T | G   |     | M   | Shift / N | Ctrl / E | Alt / I | Super / O |
+| L3     | Z         | X       | C        | D         | V   |     | K   | H         | ,        | .       | /         |
++--------+-----------+---------+----------+-----------+-----+-----+-----+-----------+----------+---------+-----------+
+| THUMBS | Niri      | Nav     | Emacs    |           |     |     | Sym | Num       | Apps     |         |           |
++--------+-----------+---------+----------+-----------+-----+-----+-----+-----------+----------+---------+-----------+
 
 Graph uses short key names; the table lists the full key or chord.
 
@@ -54,6 +59,7 @@ Home-row keys tap the letter, hold the mod.
 
 Combos (Base layer positions):
 
++--------------+--------------------------------+----------------------+
 | Keys         | Chord                          | Does                 |
 | ------------ | ------------------------------ | -------------------- |
 | H+Comma      | Tab                            | Sends Tab            |
@@ -61,3 +67,4 @@ Combos (Base layer positions):
 | X+C          | =>                             | Types =>             |
 | J+L          | julio.antunez.tarin@gmail.com  | Types personal email |
 | L+U          | julio.antunez.tarin@icloud.com | Types work email     |
++--------------+--------------------------------+----------------------+
