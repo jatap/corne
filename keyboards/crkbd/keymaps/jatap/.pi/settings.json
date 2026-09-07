@@ -1,0 +1,8 @@
+{
+  "defaultProvider": "fireworks",
+  "defaultModel": "accounts/fireworks/models/glm-5p3-flash",
+  "defaultThinkingLevel": "high",
+  "modelThinkingLevels": {
+    "fireworks/accounts/fireworks/models/glm-5p3-flash": "high"
+  }
+}
