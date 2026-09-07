@@ -10,7 +10,7 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 - Modifiers: ⌘ Super, ⌥ Alt, ⌃ Ctrl, ⇧ Shift.
 - Home-row keys and base thumbs are tap-hold: tap gives the printed key, hold gives the printed modifier or layer.
 - `—` means a disabled key (no-op), not a transparent key.
-- "Acts on" says what receives the chord: `Niri` (window manager), `Emacs`, `Neovim`, `System` (OS-level, XKB compose), or `App` (the focused application).
+- "Acts on" says what receives the chord: `Niri` (window manager), `Emacs`, `System` (OS-level, XKB compose), or `App` (the focused application).
 
 ## Base (Colemak-DH)
 
@@ -20,18 +20,18 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
  Z       X       C       D       V         K       H       ,       .       /
 
                  Tab     Esc     Space     Bksp    Enter   Del
-                 Media   Nav     Vim       Sym     Num     Apps
+                 Niri    Nav     Emacs     Sym     Num     Apps
 ```
 
 - Home row: hold = modifier (A ⌘, R ⌥, S ⌃, T ⇧ / N ⇧, E ⌃, I ⌥, O ⌘), tap = letter.
 - Thumbs: tap = top key, hold = bottom layer.
 
-## Media (hold left thumb 1)
+## Niri (hold left thumb 1)
 
 ```
- HyprC   HyprEsc HyprDel —       —         HyprF   Hypr7   HyprA   HyprT   HyprS
- ⌘       ⌥       ⌃       ⇧       —         M30     M29     M28     HyprBsp HyprW
- —       MehZ    MehV    —       —         M31     Hypr8   Hypr4   HyprX   HyprE
+ HyprC   HyprEsc —       —       —         HyprF   M30     HyprA   HyprBsp —
+ ⌘       ⌥       ⌃       ⇧       —         —       M29     HyprT   —       —
+ —       —       —       —       —         —       M28     Hypr4   HyprX   —
 
                                    HyprU   HyprD   Extra
 ```
@@ -40,30 +40,21 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 | ------- | ------- | ------------------------------------ |
 | HyprC   | Niri    | Config reload notification           |
 | HyprEsc | Niri    | Launch Waybar                        |
-| HyprDel | Niri    | Quit Niri                            |
 | HyprF   | Niri    | Maximise window to edges             |
-| Hypr7   | Niri    | Consume or expel window left         |
 | HyprA   | Niri    | Focus first column                   |
 | HyprT   | Niri    | Centre column                        |
-| HyprS   | Niri    | Toggle column tabbed display         |
 | HyprBsp | Niri    | Toggle floating + 28% width + centre |
-| HyprW   | Niri    | Consume window into column (group)   |
-| Hypr8   | Niri    | Consume or expel window right        |
 | Hypr4   | Niri    | Focus last column                    |
 | HyprX   | Niri    | Switch focus floating/tiling         |
-| HyprE   | Niri    | Expel window from column (ungroup)   |
 | HyprU   | Niri    | Helper script menu                   |
 | HyprD   | Niri    | Toggle fuzzel launcher               |
-| MehZ    | Niri    | Woomer spotlight                     |
-| MehV    | Niri    | Voxtype voice input toggle           |
 | Extra   | —       | Hold for Extra layer                 |
 
-| Macro | Sends          | Acts on | Function              |
-| ----- | -------------- | ------- | --------------------- |
-| M30   | `Super+Ctrl+1` | Niri    | Set column width 16%  |
-| M28   | `Super+Ctrl+2` | Niri    | Set column width 28%  |
-| M29   | `Super+Ctrl+4` | Niri    | Set column width 44%  |
-| M31   | `Super+Ctrl+8` | Niri    | Set column width 100% |
+| Macro | Sends          | Acts on | Function             |
+| ----- | -------------- | ------- | -------------------- |
+| M30   | `Super+Ctrl+1` | Niri    | Set column width 16% |
+| M29   | `Super+Ctrl+4` | Niri    | Set column width 44% |
+| M28   | `Super+Ctrl+2` | Niri    | Set column width 28% |
 
 ## Nav (hold left thumb 2)
 
@@ -79,7 +70,7 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 - The Apps thumb is hold-only (no tap key on this layer).
 - `⌘Z`, `⌘C`, `⌘X`, `⌘V` act on the focused application.
 
-## Vim (hold left thumb 3)
+## Emacs (hold left thumb 3)
 
 ```
  —       —       —       —       —         M17     M18     M19     M4      M20
@@ -89,26 +80,26 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
                                    M0      M3      M12
 ```
 
-| Macro | Sends            | Acts on      | Function                                      |
-| ----- | ---------------- | ------------ | --------------------------------------------- |
-| M17   | `M-s l`          | Emacs+Neovim | Occur (search in current buffer)              |
-| M18   | `C-x C-j`        | Emacs+Neovim | Dired-jump (open dired at current buffer)     |
-| M19   | `C-c c`          | Emacs+Neovim | Comment line or region                        |
-| M4    | `C-c g s`        | Emacs+Neovim | Magit status (git status)                     |
-| M20   | `M-%`            | Emacs/Neovim | query-replace / git UI (lazygit)              |
-| M14   | `Super+Enter`, b | Emacs+Neovim | Activities: switch buffer of current activity |
-| M15   | `M-{`            | Emacs+Neovim | Backward paragraph                            |
-| M16   | `M-}`            | Emacs+Neovim | Forward paragraph                             |
-| M5    | `C-c g l`        | Emacs+Neovim | Magit log current                             |
-| M21   | `C-x o`          | Emacs+Neovim | Other window                                  |
-| M13   | `C-x p f`        | Emacs+Neovim | Project find file                             |
-| M1    | `C-x b`          | Emacs/Neovim | switch-to-buffer / previous buffer            |
-| M2    | `C-c b @`        | Neovim       | Next buffer (unbound in Emacs)                |
-| M6    | `C-c g i`        | Emacs+Neovim | Magit log for current file                    |
-| M22   | `C-c t d`        | Emacs+Neovim | New vterm session                             |
-| M0    | `C-x p ,`        | Emacs+Neovim | Project find regexp                           |
-| M3    | `C-c b d`        | Emacs+Neovim | Delete window                                 |
-| M12   | `C-x p .`        | Emacs+Neovim | Project find regexp at point                  |
+| Macro | Sends            | Acts on | Function                                      |
+| ----- | ---------------- | ------- | --------------------------------------------- |
+| M17   | `M-s l`          | Emacs   | Occur (search in current buffer)              |
+| M18   | `C-x C-j`        | Emacs   | Dired-jump (open dired at current buffer)     |
+| M19   | `C-c c`          | Emacs   | Comment line or region                        |
+| M4    | `C-c g s`        | Emacs   | Magit status (git status)                     |
+| M20   | `M-G`, `g`       | Emacs   | Goto line                                     |
+| M14   | `Super+Enter`, b | Emacs   | Activities: switch buffer of current activity |
+| M15   | `M-{`            | Emacs   | Backward paragraph                            |
+| M16   | `M-}`            | Emacs   | Forward paragraph                             |
+| M5    | `C-c g l`        | Emacs   | Magit log current                             |
+| M21   | `C-x o`          | Emacs   | Other window                                  |
+| M13   | `C-x p f`        | Emacs   | Project find file                             |
+| M1    | `C-x b`          | Emacs   | switch-to-buffer (prompt for a buffer)        |
+| M2    | `C-c b @`        | —       | Next buffer (unbound in Emacs)                |
+| M6    | `C-c g i`        | Emacs   | Magit log for current file                    |
+| M22   | `C-c t d`        | Emacs   | New vterm session                             |
+| M0    | `C-x p ,`        | Emacs   | Project find regexp                           |
+| M3    | `C-c b d`        | Emacs   | Delete window                                 |
+| M12   | `C-x p .`        | Emacs   | Project find regexp at point                  |
 
 ## Sym (hold right thumb 1)
 
@@ -132,12 +123,12 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 ```
  [       7       8       9       ]         —       —       —       —       —
  ;       4       5       6       =         —       ⇧       ⌃       ⌥       ⌘
- `       1       2       3       \         A       OSHypr  OSMeh   —       —
+ `       1       2       3       \         —       —       —       —       —
 
  .       0       -
 ```
 
-- `OSHypr` / `OSMeh`: one-shot (sticky) Hyper / Meh modifiers.
+- `OSHypr` / `OSMeh` were removed; one-shot modifier support stays configured in `config.h`.
 
 ## Apps (hold right thumb 3)
 
@@ -170,18 +161,18 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 | ⌃-      | App     | Zoom out                     |
 | ⌃+      | App     | Zoom in                      |
 
-| Macro | Sends         | Acts on      | Function                                |
-| ----- | ------------- | ------------ | --------------------------------------- |
-| M23   | `C-x 3`       | Emacs+Neovim | Split window right                      |
-| M11   | `C-x 2`       | Emacs+Neovim | Split window below                      |
-| M9    | `C-x 1`       | Emacs+Neovim | Delete other windows                    |
-| M24   | `C-u C-Spc`   | Emacs+Neovim | Move point to previous mark (mark ring) |
-| M25   | `C-Spc C-Spc` | Emacs+Neovim | Set mark without activating             |
-| M8    | `M-s M-.`     | Emacs        | Isearch thing at point                  |
-| M7    | `M-s ,`       | Emacs        | Occur word at point                     |
-| M10   | `M-s r`       | Emacs        | Replace regexp as diff                  |
+| Macro | Sends         | Acts on | Function                                |
+| ----- | ------------- | ------- | --------------------------------------- |
+| M23   | `C-x 3`       | Emacs   | Split window right                      |
+| M11   | `C-x 2`       | Emacs   | Split window below                      |
+| M9    | `C-x 1`       | Emacs   | Delete other windows                    |
+| M24   | `C-u C-Spc`   | Emacs   | Move point to previous mark (mark ring) |
+| M25   | `C-Spc C-Spc` | Emacs   | Set mark without activating             |
+| M8    | `M-s M-.`     | Emacs   | Isearch thing at point                  |
+| M7    | `M-s ,`       | Emacs   | Occur word at point                     |
+| M10   | `M-s r`       | Emacs   | Replace regexp as diff                  |
 
-## Extra (hold Media right thumb 3)
+## Extra (hold Niri right thumb 3)
 
 ```
  F10     F9      F8      F7      F6        F5      F4      F3      F2      F1
@@ -208,11 +199,10 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 
 ## Behaviour notes
 
-- Layer thumbs (Media, Nav, Sym, Num, Apps) are `LT()` keys with permissive hold enabled, so tapping one and rolling into another key inside the tapping term activates the layer. Two intentional toggles: `HOLD_ON_OTHER_KEY_PRESS_PER_KEY` stays commented out, so `get_hold_on_other_key_press()` in `keymap.c` is not compiled (uncomment the define to activate it); `TAPPING_FORCE_HOLD_PER_KEY` compiles `get_tapping_force_hold()`, but this QMK tree's core no longer calls it — the feature became `QUICK_TAP_TERM` (see `docs/ChangeLog/20230226.md` in the firmware tree).
+- Layer thumbs (Niri, Nav, Sym, Num, Apps) are `LT()` keys with permissive hold enabled, so tapping one and rolling into another key inside the tapping term activates the layer. Two intentional toggles: `HOLD_ON_OTHER_KEY_PRESS_PER_KEY` stays commented out, so `get_hold_on_other_key_press()` in `keymap.c` is not compiled (uncomment the define to activate it); `TAPPING_FORCE_HOLD_PER_KEY` compiles `get_tapping_force_hold()`, but this QMK tree's core no longer calls it — the feature became `QUICK_TAP_TERM` (see `docs/ChangeLog/20230226.md` in the firmware tree).
 - Tapping terms are shortened per key: home-row mods by 10-30 ms, layer thumbs by 30 ms (see `keymap.c`).
 - Auto-shift is enabled for digits and symbols only (`NO_AUTO_SHIFT_ALPHA`, 175 ms timeout). Holding a letter does nothing special; holding `1` types `!`.
-- One-shot Hyper and Meh live on the Num layer, with `ONESHOT_TIMEOUT 2000` and `ONESHOT_TAP_TOGGLE 5`.
-- Macros tagged `@emacs` / `@neovim` / `@niri` are documented in `macros.c`.
+- Macros tagged `@emacs` / `@niri` are documented in `macros.c`.
 
 ## Build and clangd database
 
@@ -235,7 +225,7 @@ PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap
 
 - Board: foostan Corne rev1 hotswap, USB-C plugged into the left half. `MASTER_LEFT` in `config.h` matches this setup.
 - Build from the repo root with `PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap`. Flash only when you intend to write firmware: `PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap:flash`.
-- Normal bootloader entry: hold left thumb 1 (Media), then right thumb 3 on that layer (Extra), then press `QK_BOOT` at the outer left palm-row key.
+- Normal bootloader entry: hold left thumb 1 (Niri), then right thumb 3 on that layer (Extra), then press `QK_BOOT` at the outer left palm-row key.
 - Emergency bootloader entry, for when `QK_BOOT` is unreachable: unplug USB-C, hold the top-left key (`Q`), plug in while still holding, wait a few seconds, then release. This runs QMK Bootmagic Lite, clears EEPROM settings, and jumps to the Caterina bootloader.
 - Bootloader evidence: `dmesg` shows `2341:0037 Arduino Micro` and `ttyACM0`. Normal firmware shows `4653:0001 foostan Corne`. Caterina returns to normal firmware after about 8 seconds if no flash starts.
 

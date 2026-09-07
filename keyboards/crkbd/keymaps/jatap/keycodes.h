@@ -11,9 +11,9 @@
 #define HOME_O RGUI_T(KC_O)
 
 // Layers
-#define LAYER_MEDIA LT(1, KC_TAB)
+#define LAYER_NIRI LT(1, KC_TAB)
 #define LAYER_NAV LT(2, KC_ESC)
-#define LAYER_VIM LT(3, KC_SPC)
+#define LAYER_EMACS LT(3, KC_SPC)
 #define LAYER_SYM LT(4, KC_BSPC)
 #define LAYER_NUM LT(5, KC_ENT)
 #define LAYER_APPS LT(6, KC_DEL)

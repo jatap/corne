@@ -16,11 +16,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           _____________________BASE_L3______________________,      _____________________BASE_R3______________________,
                          _____________BASE_LEFT_____________,      _____________BASE_RIGHT____________
   ),
-  [_MEDIA] = LAYOUT_wrapper(
-          _____________________MEDIA_L1_____________________,      _____________________MEDIA_R1_____________________,
-          _____________________MEDIA_L2_____________________,      _____________________MEDIA_R2_____________________,
-          _____________________MEDIA_L3_____________________,      _____________________MEDIA_R3_____________________,
-                         _____________MEDIA_LEFT____________,      _____________MEDIA_RIGHT___________
+  [_NIRI] = LAYOUT_wrapper(
+          _____________________NIRI_L1______________________,      _____________________NIRI_R1______________________,
+          _____________________NIRI_L2______________________,      _____________________NIRI_R2______________________,
+          _____________________NIRI_L3______________________,      _____________________NIRI_R3______________________,
+                         _____________NIRI_LEFT_____________,      _____________NIRI_RIGHT____________
   ),
   [_NAV] = LAYOUT_wrapper(
           _____________________NAV_L1_______________________,      _____________________NAV_R1_______________________,
@@ -28,11 +28,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           _____________________NAV_L3_______________________,      _____________________NAV_R3_______________________,
                          _____________NAV_LEFT______________,      _____________NAV_RIGHT_____________
   ),
-  [_VIM] = LAYOUT_wrapper(
-          _____________________VIM_L1_______________________,      _____________________VIM_R1_______________________,
-          _____________________VIM_L2_______________________,      _____________________VIM_R2_______________________,
-          _____________________VIM_L3_______________________,      _____________________VIM_R3_______________________,
-                         _____________VIM_LEFT______________,      _____________VIM_RIGHT_____________
+  [_EMACS] = LAYOUT_wrapper(
+          _____________________EMACS_L1_____________________,      _____________________EMACS_R1_____________________,
+          _____________________EMACS_L2_____________________,      _____________________EMACS_R2_____________________,
+          _____________________EMACS_L3_____________________,      _____________________EMACS_R3_____________________,
+                         _____________EMACS_LEFT____________,      _____________EMACS_RIGHT___________
   ),
   [_SYM] = LAYOUT_wrapper(
           _____________________SYM_L1_______________________,      _____________________SYM_R1_______________________,
@@ -76,11 +76,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case HOME_T:
         case HOME_N:
             return TAPPING_TERM - 30;
-        case LAYER_MEDIA:
+        case LAYER_NIRI:
         case LAYER_NAV:
         case LAYER_NUM:
         case LAYER_SYM:
-        /* case LAYER_VIM: */
+        /* case LAYER_EMACS: */
         case LAYER_APPS:
             return TAPPING_TERM - 30;
         case LAYER_EXTRA:
@@ -112,11 +112,11 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 #ifdef PERMISSIVE_HOLD_PER_KEY
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LAYER_MEDIA:
+        case LAYER_NIRI:
         case LAYER_NAV:
         case LAYER_NUM:
         case LAYER_SYM:
-        /* case LAYER_VIM: */
+        /* case LAYER_EMACS: */
         /* case LAYER_EXTRA: */
         case LAYER_APPS:
             return true;
@@ -129,11 +129,11 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 #ifdef HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LAYER_MEDIA:
+        case LAYER_NIRI:
         case LAYER_NAV:
         case LAYER_NUM:
         case LAYER_SYM:
-        /* case LAYER_VIM: */
+        /* case LAYER_EMACS: */
         /* case LAYER_EXTRA: */
         case LAYER_APPS:
             return true;

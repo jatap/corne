@@ -1,8 +1,8 @@
 typedef enum {
     _BASE,
-    _MEDIA,
+    _NIRI,
     _NAV,
-    _VIM,
+    _EMACS,
     _SYM,
     _NUM,
     _APPS,
