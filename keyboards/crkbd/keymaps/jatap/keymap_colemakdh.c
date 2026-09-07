@@ -31,12 +31,12 @@
 #define _____________________NAV_L2_______________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
 #define _____________________NAV_L3_______________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________________NAV_R1_______________________ KC_CAPS,             LGUI(KC_Z), KC_UP,   LGUI(KC_C), LGUI(KC_X)
-#define _____________________NAV_R2_______________________ QK_CAPS_WORD_TOGGLE, KC_LEFT,    KC_DOWN, KC_RIGHT,   LGUI(KC_V)
-#define _____________________NAV_R3_______________________ XXXXXXX,             KC_HOME,    KC_PGUP, KC_PGDN,    KC_END
+#define _____________________NAV_R1_______________________ KC_CAPS,             XXXXXXX, KC_UP,   XXXXXXX,  XXXXXXX
+#define _____________________NAV_R2_______________________ QK_CAPS_WORD_TOGGLE, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX
+#define _____________________NAV_R3_______________________ XXXXXXX,             KC_HOME, KC_PGUP, KC_PGDN,  KC_END
 
 #define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
-#define _____________NAV_RIGHT_____________ KC_BSPC, MO(6), KC_DEL
+#define _____________NAV_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________________EMACS_L1_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________________EMACS_L2_____________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX

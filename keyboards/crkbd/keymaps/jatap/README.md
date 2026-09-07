@@ -59,16 +59,15 @@ Crkbd (36-key, 3×5+3) with Colemak-DH. This document is a reading reference: wh
 ## Nav (hold left thumb 2)
 
 ```
- —       —       —       —       —         Caps    ⌘Z      ↑       ⌘C      ⌘X
- ⌘       ⌥       ⌃       ⇧       —         CapWrd  ←       ↓       →       ⌘V
+ —       —       —       —       —         Caps    —       ↑       —       —
+ ⌘       ⌥       ⌃       ⇧       —         CapWrd  ←       ↓       →       —
  —       —       —       —       —         Home    PgUp    PgDn    End
 
-                                   Bksp    Apps    Del
+                                   —       —       —
 ```
 
 - `CapWrd` toggles Caps Word.
-- The Apps thumb is hold-only (no tap key on this layer).
-- `⌘Z`, `⌘C`, `⌘X`, `⌘V` act on the focused application.
+- Copy, cut, paste, and undo live in the applications: your Emacs binds the Super chords to other commands (`compile`, `crux` helpers, `vundo`), so these keys are not on the keymap.
 
 ## Emacs (hold left thumb 3)
 
