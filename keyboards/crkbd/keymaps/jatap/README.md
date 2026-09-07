@@ -205,6 +205,12 @@ Compose uses the `compose:caps` XKB option: the macro taps Caps Lock, which Niri
 - Accepted side effects: inside pi, `Ctrl+X` copies the message and `Ctrl+C` copies the selection (clears the editor on a second press). The Emacs macros target Emacs; pi keybindings stay untouched.
 - Macros tagged `@emacs` / `@niri` are documented in `macros.c`.
 
+## Rendering this reference with pi
+
+- The pi prompt `.pi/prompts/layers.md` regenerates the layer reference from the keymap sources: `/layers apps` renders one layer, `/layers` renders all of them.
+- Add `--save` to write the output to files instead of the chat: `/layers apps --save` writes `docs/apps.md`, and `/layers --save` writes one file per layer. File names are the layer name in lowercase, and existing files are overwritten. Each saved file holds only that layer's key table and layout graph, with no headings or notes.
+- The prompt derives every chord from `SEND_STRING` in `macros.c` and marks effects it cannot verify in the app configs as "unverified".
+
 ## Build and clangd database
 
 For a normal firmware build, run only this command from the repo root:
@@ -236,4 +242,5 @@ PATH="$PWD/.venv/bin:$PATH" make crkbd:jatap
 - `macros.c` — macro definitions and app tags
 - `combos.c` — combos
 - `keycodes.h`, `layers.h` — home-row mods, layer-tap keys, layer names
+- `.pi/prompts/layers.md` — pi prompt that renders this reference; saved output goes to `docs/`
 - Niri side: `~/.dotfiles/niri/.config/niri/config.kdl` and `KEYBINDINGS.md`
