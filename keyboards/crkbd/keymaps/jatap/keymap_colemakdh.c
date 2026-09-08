@@ -38,7 +38,7 @@
 #define _____________NAV_LEFT______________ XXXXXXX, XXXXXXX, XXXXXXX
 #define _____________NAV_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
-#define _____________________EMACS_L1_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____________________EMACS_L1_____________________ XXXXXXX, XXXXXXX, QMK_M24, QMK_M25, XXXXXXX
 #define _____________________EMACS_L2_____________________ KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
 #define _____________________EMACS_L3_____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
@@ -75,9 +75,9 @@
 #define _____________________APPS_L2______________________ XXXXXXX,    MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M11
 #define _____________________APPS_L3______________________ HYPR(KC_R), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M9
 
-#define _____________________APPS_R1______________________ XXXXXXX,    QMK_M24, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
+#define _____________________APPS_R1______________________ XXXXXXX,    XXXXXXX, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
 #define _____________________APPS_R2______________________ HYPR(KC_9), KC_RSFT, KC_RCTL,     KC_RALT,     KC_RGUI
-#define _____________________APPS_R3______________________ HYPR(KC_0), QMK_M25, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
+#define _____________________APPS_R3______________________ HYPR(KC_0), XXXXXXX, XXXXXXX,     HYPR(KC_5),  HYPR(KC_6)
 
 #define _____________APPS_LEFT_____________ QMK_M8, QMK_M7, QMK_M10
 #define _____________APPS_RIGHT____________ XXXXXXX, XXXXXXX, XXXXXXX
