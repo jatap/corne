@@ -5,7 +5,7 @@
 | Position | Key               | Chord                  | Does                                               |
 +----------+-------------------+------------------------+----------------------------------------------------+
 | L1-1     | HYPR+Q            | HYPR+Q                 | Niri: close-window                                 |
-| L2-1     | -                 | -                      | -                                                  |
+| L2-1     | MEH+A             | MEH+A                  | Niri: diskwatch                                    |
 | L3-1     | HYPR+R            | HYPR+R                 | Niri: switch-preset-column-width                   |
 | L1-2     | Ctrl+0            | Ctrl+0                 | Reset font size                                    |
 | L2-2     | MEH+I             | MEH+I                  | Niri: open rustnet in kitty                        |
@@ -48,7 +48,7 @@
 | ROW    | 1      | 2      | 3          | 4         | 5   |     | 1      | 2     | 3      | 4      | 5          |
 +--------+--------+--------+------------+-----------+-----+-----+--------+-------+--------+--------+------------+
 | L1     | HYPR+Q | Ctrl+0 | Ctrl+Minus | Ctrl+Plus | M23 |     | -      | -     | HYPR+3 | HYPR+2 | HYPR+Enter |
-| L2     | -      | MEH+I  | MEH+B      | MEH+S     | M11 |     | HYPR+9 | Shift | Ctrl   | Alt    | Super      |
+| L2     | MEH+A  | MEH+I  | MEH+B      | MEH+S     | M11 |     | HYPR+9 | Shift | Ctrl   | Alt    | Super      |
 | L3     | HYPR+R | MEH+P  | HYPR+1     | HYPR+N    | M9  |     | HYPR+0 | -     | -      | HYPR+5 | HYPR+6     |
 +--------+--------+--------+------------+-----------+-----+-----+--------+-------+--------+--------+------------+
 | THUMBS | M8     | M7     | M10        |           |     |     | -      | -     | -      |        |            |

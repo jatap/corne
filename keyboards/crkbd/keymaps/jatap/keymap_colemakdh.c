@@ -72,7 +72,7 @@
 #define _____________NUM_RIGHT_____________ XXXXXXX, XXXXXXX, XXXXXXX
 
 #define _____________________APPS_L1______________________ HYPR(KC_Q), LCTL(KC_0), LCTL(KC_KP_MINUS), LCTL(KC_KP_PLUS), QMK_M23
-#define _____________________APPS_L2______________________ XXXXXXX,    MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M11
+#define _____________________APPS_L2______________________ MEH(KC_A),  MEH(KC_I),  MEH(KC_B),         MEH(KC_S),        QMK_M11
 #define _____________________APPS_L3______________________ HYPR(KC_R), MEH(KC_P),  HYPR(KC_1),        HYPR(KC_N),       QMK_M9
 
 #define _____________________APPS_R1______________________ XXXXXXX,    XXXXXXX, HYPR(KC_3),  HYPR(KC_2),  HYPR(KC_ENT)
