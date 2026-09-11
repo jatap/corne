@@ -1,8 +1,8 @@
 {
   "defaultProvider": "fireworks",
-  "defaultModel": "accounts/fireworks/models/glm-5p3-flash",
+  "defaultModel": "accounts/fireworks/models/deepseek-v4p1-flash",
   "defaultThinkingLevel": "high",
   "modelThinkingLevels": {
-    "fireworks/accounts/fireworks/models/glm-5p3-flash": "high"
+    "fireworks/accounts/fireworks/models/deepseek-v4p1-flash": "high"
   }
 }
