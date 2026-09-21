@@ -222,6 +222,55 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_1))));
             }
             break;
+
+        /** @emacs mc/mark-next-like-this (mark next match) */
+        case QMK_M31:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c") "m" "n");
+            }
+            break;
+
+        /** @emacs mc/mark-previous-like-this (mark previous match) */
+        case QMK_M32:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c") "m" "p");
+            }
+            break;
+
+        /** @emacs mc/mark-all-like-this (mark all matches) */
+        case QMK_M33:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c") "m" "a");
+            }
+            break;
+
+        /** @emacs mc/mark-next-like-this-symbol (mark next symbol match) */
+        case QMK_M34:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c") "m" "s" "n");
+            }
+            break;
+
+        /** @emacs mc/mark-previous-like-this-symbol (mark previous symbol match) */
+        case QMK_M35:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c") "m" "s" "p");
+            }
+            break;
+
+        /** @emacs mc/skip-to-next-like-this (skip current; no selection: cursor below) */
+        case QMK_M36:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c") "m" "k");
+            }
+            break;
+
+        /** @emacs mc/skip-to-previous-like-this (skip current; no selection: cursor above) */
+        case QMK_M37:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c") "m" "K");
+            }
+            break;
     }
     return true;
 };

@@ -1,56 +1,56 @@
 # Nav
 
 ```text
-+----------+-----------+------------+----------------------------+
-| Position | Key       | Chord      | Does                       |
-+----------+-----------+------------+----------------------------+
-| L1-1     | -         | -          | -                          |
-| L2-1     | Super     | Left Super | Super modifier (left hand) |
-| L3-1     | -         | -          | -                          |
-| L1-2     | -         | -          | -                          |
-| L2-2     | Alt       | Left Alt   | Alt modifier (left hand)   |
-| L3-2     | -         | -          | -                          |
-| L1-3     | -         | -          | -                          |
-| L2-3     | Ctrl      | Left Ctrl  | Ctrl modifier (left hand)  |
-| L3-3     | -         | -          | -                          |
-| L1-4     | -         | -          | -                          |
-| L2-4     | Shift     | Left Shift | Shift modifier (left hand) |
-| L3-4     | -         | -          | -                          |
-| L1-5     | -         | -          | -                          |
-| L2-5     | -         | -          | -                          |
-| L3-5     | -         | -          | -                          |
-| R1-1     | Caps Lock | Caps Lock  | Toggle Caps Lock           |
-| R2-1     | Caps Word | Caps Word  | Toggle Caps Word           |
-| R3-1     | -         | -          | -                          |
-| R1-2     | -         | -          | -                          |
-| R2-2     | Left      | Left       | Move cursor left           |
-| R3-2     | Home      | Home       | Move to line start         |
-| R1-3     | Up        | Up         | Move cursor up             |
-| R2-3     | Down      | Down       | Move cursor down           |
-| R3-3     | Page Up   | Page Up    | Page up                    |
-| R1-4     | -         | -          | -                          |
-| R2-4     | Right     | Right      | Move cursor right          |
-| R3-4     | Page Down | Page Down  | Page down                  |
-| R1-5     | -         | -          | -                          |
-| R2-5     | -         | -          | -                          |
-| R3-5     | End       | End        | Move to line end           |
-| LT-1     | -         | -          | -                          |
-| LT-2     | -         | -          | -                          |
-| LT-3     | -         | -          | -                          |
-| RT-1     | -         | -          | -                          |
-| RT-2     | -         | -          | -                          |
-| RT-3     | -         | -          | -                          |
-+----------+-----------+------------+----------------------------+
++----------+-----------+--------------------------------+--------------------------------------------------------------------------+
+| Position | Key       | Chord                          | Does                                                                     |
++----------+-----------+--------------------------------+--------------------------------------------------------------------------+
+| L1-1     | -         | -                              | -                                                                        |
+| L2-1     | Super     | Left Super                     | Super modifier (left hand)                                               |
+| L3-1     | -         | -                              | -                                                                        |
+| L1-2     | -         | -                              | -                                                                        |
+| L2-2     | Alt       | Left Alt                       | Alt modifier (left hand)                                                 |
+| L3-2     | -         | -                              | -                                                                        |
+| L1-3     | -         | -                              | -                                                                        |
+| L2-3     | Ctrl      | Left Ctrl                      | Ctrl modifier (left hand)                                                |
+| L3-3     | M37       | Ctrl+C, then M, then Shift+K   | mc/skip-to-previous-like-this (skip current; no selection: cursor above) |
+| L1-4     | -         | -                              | -                                                                        |
+| L2-4     | Shift     | Left Shift                     | Shift modifier (left hand)                                               |
+| L3-4     | M36       | Ctrl+C, then M, then K         | mc/skip-to-next-like-this (skip current; no selection: cursor below)     |
+| L1-5     | -         | -                              | -                                                                        |
+| L2-5     | -         | -                              | -                                                                        |
+| L3-5     | -         | -                              | -                                                                        |
+| R1-1     | Caps Lock | Caps Lock                      | Toggle Caps Lock                                                         |
+| R2-1     | Caps Word | Caps Word                      | Toggle Caps Word                                                         |
+| R3-1     | -         | -                              | -                                                                        |
+| R1-2     | -         | -                              | -                                                                        |
+| R2-2     | Left      | Left                           | Move cursor left                                                         |
+| R3-2     | Home      | Home                           | Move to line start                                                       |
+| R1-3     | Up        | Up                             | Move cursor up                                                           |
+| R2-3     | Down      | Down                           | Move cursor down                                                         |
+| R3-3     | Page Up   | Page Up                        | Page up                                                                  |
+| R1-4     | -         | -                              | -                                                                        |
+| R2-4     | Right     | Right                          | Move cursor right                                                        |
+| R3-4     | Page Down | Page Down                      | Page down                                                                |
+| R1-5     | M34       | Ctrl+C, then M, then S, then N | mc/mark-next-like-this-symbol (mark next symbol match)                   |
+| R2-5     | M35       | Ctrl+C, then M, then S, then P | mc/mark-previous-like-this-symbol (mark previous symbol match)           |
+| R3-5     | End       | End                            | Move to line end                                                         |
+| LT-1     | -         | -                              | -                                                                        |
+| LT-2     | -         | -                              | -                                                                        |
+| LT-3     | -         | -                              | -                                                                        |
+| RT-1     | M31       | Ctrl+C, then M, then N         | mc/mark-next-like-this (mark next match)                                 |
+| RT-2     | M32       | Ctrl+C, then M, then P         | mc/mark-previous-like-this (mark previous match)                         |
+| RT-3     | M33       | Ctrl+C, then M, then A         | mc/mark-all-like-this (mark all matches)                                 |
++----------+-----------+--------------------------------+--------------------------------------------------------------------------+
 ```
 
 ```text
 +--------+-------+-----+------+-------+---+-----+-----------+------+---------+-----------+-----+
 | ROW    | 1     | 2   | 3    | 4     | 5 |     | 1         | 2    | 3       | 4         | 5   |
 +--------+-------+-----+------+-------+---+-----+-----------+------+---------+-----------+-----+
-| L1     | -     | -   | -    | -     | - |     | Caps Lock | -    | Up      | -         | -   |
-| L2     | Super | Alt | Ctrl | Shift | - |     | Caps Word | Left | Down    | Right     | -   |
-| L3     | -     | -   | -    | -     | - |     | -         | Home | Page Up | Page Down | End |
+| L1     | -     | -   | -    | -     | - |     | Caps Lock | -    | Up      | -         | M34 |
+| L2     | Super | Alt | Ctrl | Shift | - |     | Caps Word | Left | Down    | Right     | M35 |
+| L3     | -     | -   | M37  | M36   | - |     | -         | Home | Page Up | Page Down | End |
 +--------+-------+-----+------+-------+---+-----+-----------+------+---------+-----------+-----+
-| THUMBS | -     | -   | -    |       |   |     | -         | -    | -       |           |     |
+| THUMBS | -     | -   | -    |       |   |     | M31       | M32  | M33     |           |     |
 +--------+-------+-----+------+-------+---+-----+-----------+------+---------+-----------+-----+
 ```

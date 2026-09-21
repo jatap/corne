@@ -15,22 +15,22 @@ Crkbd (36-key, 3x5+3) with Colemak-DH. This file is the map and the notation key
 
 Hold a thumb to reach a layer. Base is Colemak-DH with home-row modifiers; its document also carries the combo table.
 
-| Layer           | Reach                   | What it is for                                                                    |
-| --------------- | ----------------------- | --------------------------------------------------------------------------------- |
-| `docs/base.md`  | —                       | Colemak-DH, home-row mods, layer-tap thumbs, combos                               |
-| `docs/niri.md`  | hold left thumb 1       | Window and column management, terminal and launcher spawns, column widths         |
-| `docs/nav.md`   | hold left thumb 2       | Arrow cluster, Home/End/Page keys, Caps Lock and Caps Word                        |
-| `docs/emacs.md` | hold left thumb 3       | Emacs commands as macros: buffers, windows, marks, projects, Magit, comment, grep |
-| `docs/sym.md`   | hold right thumb 1      | Symbols and brackets, Compose sequences for £ and €                               |
-| `docs/num.md`   | hold right thumb 2      | Numpad block with arithmetic keys                                                 |
-| `docs/apps.md`  | hold right thumb 3      | App-level chords: Niri window actions, zoom, Emacs window commands                |
-| `docs/extra.md` | hold Niri right thumb 3 | Function keys, media keys, bootloader                                             |
+| Layer           | Reach                   | What it is for                                                                        |
+| --------------- | ----------------------- | ------------------------------------------------------------------------------------- |
+| `docs/base.md`  | —                       | Colemak-DH, home-row mods, layer-tap thumbs, combos                                   |
+| `docs/niri.md`  | hold left thumb 1       | Window and column management, terminal and launcher spawns, column widths             |
+| `docs/nav.md`   | hold left thumb 2       | Arrow cluster, Home/End/Page keys, Caps Lock, Caps Word, Emacs multiple-cursor chords |
+| `docs/emacs.md` | hold left thumb 3       | Emacs commands as macros: buffers, windows, marks, projects, Magit, comment, grep     |
+| `docs/sym.md`   | hold right thumb 1      | Symbols and brackets, Compose sequences for £ and €                                   |
+| `docs/num.md`   | hold right thumb 2      | Numpad block with arithmetic keys                                                     |
+| `docs/apps.md`  | hold right thumb 3      | App-level chords: Niri window actions, zoom, Emacs window commands                    |
+| `docs/extra.md` | hold Niri right thumb 3 | Function keys, media keys, bootloader                                                 |
 
 ### Notes worth having
 
 These are the decisions a table cannot show.
 
-- **Copy, cut, paste and undo are not on the keymap.** They live in the applications: your Emacs binds the Super chords to other commands (`compile`, `crux` helpers, `vundo`), so the Nav layer deliberately carries no editing keys.
+- **Copy, cut, paste and undo are still not on the keymap.** They live in the applications: your Emacs binds the Super chords to other commands (`compile`, `crux` helpers, `vundo`). The Nav layer does carry the Emacs multiple-cursor chords (`mc/*`), because those need macro payloads and sit under the left-thumb Nav layer.
 - **Compose uses the `compose:caps` XKB option.** The £ and € macros on the Sym layer tap Caps Lock, which Niri maps to Compose; they are not modifier chords.
 - **Zoom keys are cross-application.** `Ctrl+0`, `Ctrl+Numpad Minus` and `Ctrl+Numpad Plus` reset or step the font size in Kitty, Emacs and Zen Browser alike, which is the point of sending the plain chords rather than app-specific ones. The one-shot combined modifiers that used to sit on the Num layer were removed; one-shot support is still configured in `config.h`.
 - **`Boot` on the Extra layer** resets the keyboard into bootloader mode.
