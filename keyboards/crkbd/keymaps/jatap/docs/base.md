@@ -70,6 +70,7 @@ Combos (Base layer positions):
 | H+Comma      | Tab                            | Sends Tab            |
 | Comma+Period | ->                             | Types ->             |
 | X+C          | =>                             | Types =>             |
+| W+F          | :=                             | Types :=             |
 | J+L          | julio.antunez.tarin@gmail.com  | Types personal email |
 | L+U          | julio.antunez.tarin@icloud.com | Types work email     |
 +--------------+--------------------------------+----------------------+

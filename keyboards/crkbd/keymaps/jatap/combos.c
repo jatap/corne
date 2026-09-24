@@ -5,6 +5,7 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM tab_combo[]               = {KC_H, KC_COMM, COMBO_END};
 const uint16_t PROGMEM multiarrow_combo[]        = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM double_multiarrow_combo[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM go_assign_combo[]         = {KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM personalmail_combo[]      = {KC_J, KC_L, COMBO_END};
 const uint16_t PROGMEM workmail_combo[]          = {KC_L, KC_U, COMBO_END};
 
@@ -12,6 +13,7 @@ combo_t key_combos[]    = {
     [TAB]               = COMBO_ACTION(tab_combo),
     [MULTIARROW]        = COMBO_ACTION(multiarrow_combo),
     [DOUBLE_MULTIARROW] = COMBO_ACTION(double_multiarrow_combo),
+    [GO_ASSIGN]         = COMBO_ACTION(go_assign_combo),
     [PERSONALMAIL]      = COMBO_ACTION(personalmail_combo),
     [WORKMAIL]          = COMBO_ACTION(workmail_combo)
 };
@@ -33,6 +35,12 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         case DOUBLE_MULTIARROW:
             if (pressed) {
                 send_string("=>");
+            }
+            break;
+
+        case GO_ASSIGN:
+            if (pressed) {
+                send_string(":=");
             }
             break;
 
